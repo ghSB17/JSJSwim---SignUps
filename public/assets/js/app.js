@@ -4,6 +4,8 @@ $(document).ready(function(){
     $('.top-bar').removeClass('expanded');
  });
 
+ alert("hello!!! just checking if this works?!!!")
+
 });
 
 

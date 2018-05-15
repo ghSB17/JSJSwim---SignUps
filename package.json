@@ -19,9 +19,9 @@
   "homepage": "https://github.com/ghSB17/JSJSwim--SignUps#readme",
   "dependencies": {
     "body-parser": "*",
-    "nodemailer":"*",
+    "nodemailer": "*",
     "mysql2": "*",
-    "sequelize":"*",
+    "sequelize": "*",
     "path": "*",
     "fs": "*",
     "express-handlebars": "*",
