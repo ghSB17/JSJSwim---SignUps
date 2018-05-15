@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSJ Swim School</title>
+
+  <!-- Connections to Foundation CSS files and cusotm css file -->
+  <link rel="stylesheet" href="./assets/css/foundation.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body>
+  <!-- top menu bar -->
+
+  <nav data-sticky-container>
+    <div data-sticky data-options="marginTop:0;">
+
+      <!-- Mobile menu  -->
+      <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+        <!-- <div class="title-bar-title">JSJ Swim School</div> -->
+      </div>
+
+      <!-- Top bar Left (Company Logo) -->
+      <div class="grid-container">
+        <div class="top-bar" id="main-nav">
+
+          <div class="top-bar-left">
+            <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <li>
+                <a href="./aboutus.html">About Us</a>
+              </li>
+              <li>
+                <a href="./locations.html">Locations</a>
+              </li>
+              <li>
+                <a href="./swimlevels.html">Swim Levels</a>
+                <ul class="menu vertical nested">
+                  <li>
+                    <a href="./swimlevels.html#parentChild">Parent/Child</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels.html#preSchool">Pre-School</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels.html#schoolAge">School Age</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels.html#competitiveSwim">Competitive</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="./learning.html">Extended Learning</a>
+              </li>
+              <li class="active">
+                <a href="./contact.html">Contact Us</a>
+              </li>
+              <li>
+                <li>
+                  <a href="./faq.html">FAQ</a>
+                </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Types -->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="style-header text-center">
+          <h1>Contact Us</h1>
+        </div>
+        <div class="text-box-sizing">
+            <h3 class="text-center">Fill out the information below.</h3>
+            <p class="text-center">
+                For more information and Private lessons.
+              <br>
+            </p>
+          </div>
+
+<!-- end second header -->
+        <div class="row">
+          <div class="grid-container">
+            <form data-abide novalidate>
+              <div data-abide-error class="alert callout" style="display: none;">
+                <p>
+                  <i class="fi-alert"></i> There are some errors in your form.</p>
+              </div>
+              <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 cell">
+                  <!-- First and last names -->
+                  <label>Parent / Guardian First Name</label>
+                  <input type="text" placeholder="Parent's First Name" aria-describedby="ParentName" required pattern="text">
+                  <span class="form-error">
+                    Yo, you had better fill this out, it's required.
+                  </span>
+                </div>
+                <div class="large-4 medium-4 cell">
+                  <label>Parent / Guardian Last Name</label>
+                  <input type="text" placeholder="Parent's Last Name" />
+                </div>
+                <!-- email with verification -->
+                <div class="large-4 medium-4 cell">
+                  <div class="grid-x">
+                    <label>Parent / Guardian Email Address</label>
+                    <div class="input-group">
+                      <input type="email" placeholder="name@domain.com" aria-describedby="emailaddress" required pattern="email">
+                      <span class="form-error">
+                        Enter a valid email address.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Subject with dropdown list of choices -->
+              <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                  <label>Subject</label>
+                  <select>
+                    <option value="parent">Parent/Child</option>
+                    <option value="preschool">Pre-School</option>
+                    <option value="school">School Age</option>
+                    <option value="competitive">Competitive</option>
+                    <option value="private">Private Lessons</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Multi-line Message area with submit button -->
+              <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                  <label>Your Message</label>
+                  <textarea placeholder="Type your message here" rows="4"></textarea>
+                </div>
+              </div>
+              <br>
+              <h6>
+                <strong>
+                  <em>
+                    If you would like to Request Private Lesssons, please also fill in the following information:</em>
+                </strong>
+              </h6>
+              <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 cell">
+                  <label>Student's First Name</label>
+                  <input type="text" placeholder="Student's First Name" />
+                </div>
+                <div class="large-4 medium-4 cell">
+                  <label>Student's Last Name</label>
+                  <input type="text" placeholder="Student's Last Name" />
+                </div>
+                <div class="large-4 medium-4 cell">
+                  <label>Student's Age</label>
+                  <input type="text" placeholder="Student's Age" />
+                </div>
+
+              </div>
+              <div class="large-6 medium-4 cell">
+                <label>
+                  <h5>Swim lessons run between 4 - 8pm Monday - Friday and 9am to 12pm Saturday.
+                    <br> Select which days you are available to attend. Please check as many as apply.</h5>
+                </label>
+                <br>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Location</label>
+                    <select name='locations' id='selectLocations'>
+                      <option value="e-brunswick">East Brunswick</option>
+                      <option value="kendall">Kendall Park</option>
+                      <option value="metuchen">Metuchen</option>
+                      <option value="old-bridge">Old Bridge</option>
+                      <option value="parlin">Parlin</option>
+                      <option value="perth">Perth Amboy</option>
+                      <option value="somerville">Somerville</option>
+                      <option value="s-amboy">South Amboy</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <input id="checkbox1" type="checkbox">
+                  <label for="checkbox1">Monday</label>
+                  <input id="checkbox2" type="checkbox">
+                  <label for="checkbox2">Tuesday</label>
+                  <input id="checkbox3" type="checkbox">
+                  <label for="checkbox3">Wednesday</label>
+                  <input id="checkbox4" type="checkbox">
+                  <label for="checkbox4">Thursday</label>
+                  <input id="checkbox5" type="checkbox">
+                  <label for="checkbox5">Friday</label>
+                  <input id="checkbox6" type="checkbox">
+                  <label for="checkbox6">Saturday</label>
+                </div>
+                <br>
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <label>Please explain the student's current swimming ability including, do they put their face in the water?
+                      Can they swim laps? Please include any details you think may be important.</label>
+                    <textarea placeholder="Please tell us about the student's current swim capability." rows="3"></textarea>
+                  </div>
+                  <div class="large-12 cell">
+                    <label>Do you have any special requests? i.e. instructor preference, time preference, etc.</label>
+                    <textarea placeholder="Do you have any special requests?" rows="3"></textarea>
+                  </div>
+                </div>
+                <a href="#" class="button">Submit</a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+       
+        
+          <!-- upper footer for additional text or link elsewhere -->
+          <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+          <div class="topFooter style-header">
+              <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <div class="text-center">
+                      <h3>Ready to register for class?</h3>
+  
+                      <!-- links for social media -->
+                      <a class="register-link" href="contact.html">Click here for more information and registration!</a>
+                      <div class="link-pic">
+                        <a href="https://www.facebook.com/USAswimming/">
+                          <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+                        </a>
+                      </div>
+                      <div class="link-pic">
+                        <a href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                          <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+                        </a>
+                      </div>
+                      <div class="link-pic">
+                        <a href="https://www.usaswimming.org/">
+                          <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    <!-- end upper footer -->
+    
+    <!-- bottom footer with image -->
+    <footer>
+      <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+        &copy; 2018 JSJ Enterprises
+      </div>
+    </footer>
+    <!-- end bottom footer -->
+  </div>
+
+  <!-- scripts for JS -->
+  <script src="./assets/js/vendor/jquery.js"></script>
+  <script src="./assets/js/vendor/what-input.js"></script>
+  <script src="./assets/js/vendor/foundation.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <script src="./assets/js/contact.js"></script>
+
+</body>
+
+</html>

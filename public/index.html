@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSJ Swim School</title>
+
+  <!-- Connections to Foundation CSS files and custom css file -->
+  <link rel="stylesheet" href="./assets/css/foundation.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body>
+  <!-- top menu bar -->
+  <nav data-sticky-container>
+    <div data-sticky data-options="marginTop:0;">
+
+      <!-- Mobile menu  -->
+      <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+      </div>
+
+      <!-- Top bar Left (Company Logo) -->
+      <div class="grid-container">
+
+        <div class="top-bar" id="main-nav">
+          <div class="top-bar-left">
+            <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+          </div>
+
+           <!-- Navigation Menu -->
+           <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/locations">Locations</a>
+              </li>
+              <li>
+                <a href="/swimlevels">Swim Levels</a>
+                <ul class="menu vertical nested">
+                  <li>
+                    <a href="./swimlevels#parentChild">Parent/Child</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#preSchool">Pre-School</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#schoolAge">School Age</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#competitiveSwim">Competitive</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/learning">Extended Learning</a>
+              </li>
+              <li class="active">
+                <a href="/contact">Contact Us</a>
+              </li>
+              <li>
+                  <li>
+                      <a href="./login">Login</a>
+                    </li>
+                <li>
+                  <a href="./faq">FAQ</a>
+                </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Sliders that appear under the Navigation for Home Page -->
+  <div class="orbit clean-hero-slider" role="region" aria-label="Swim Class Photos" data-orbit>
+    <div class="orbit-wrapper">
+      <div class="orbit-controls">
+        <button class="orbit-previous">
+          <span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next">
+          <span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      </div>
+      <ul class="orbit-container">
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/images/swimmer-banner-boy-cut.jpg" alt="Boy swimming">
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/images/instructor-banner.jpg" alt="instructor and chld">
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/images/facility-banner.jpg" alt="facility">
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="intro-text">
+          <h1>JSJ Swim School</h1>
+
+          <h3>Who are we?</h3>
+          <p>Learning to swim is a process that depends on the mastery of a progression of skills. We crafted our swim class
+            curriculum to help swimmers of all ages and skill levels master the five developmental components of swimming:
+            comfort, coordination, technique, endurance and speed. We offer swim classes in a variety of formats, including
+            group classes, parent-infant classes and one-on-one private lessons. Our swim instruction classes begin as early
+            as four months old and go all the way to adults.
+          </p>
+        </div>
+        <br>
+        <div class="text-center">
+          <h3>Classes Offered</h3>
+          <hr>
+        </div>
+
+        <!-- Container for thumbnails for different class levels with links to the swimlevels page -->
+        <article class="grid-container">
+          <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-4">
+            <div class="cell">
+              <img class="thumbnail" src="./assets/images/parent-child-2.jpg" alt="Parent and Child Swim Class">
+              <h5>Parent and Child</h5>
+              <a href="./swimlevels.html#parentChild" class="button expanded button-styling">Learn More</a>
+            </div>
+            <div class="cell">
+              <img class="thumbnail" src="./assets/images/pre-school-class.jpg" alt="Pre-school Class">
+              <h5>Pre-School Classes</h5>
+              <a href="./swimlevels.html#preSchool" class="button expanded button-styling">Learn More</a>
+            </div>
+            <div class="cell">
+              <img class="thumbnail" src="./assets/images/school-age-class.jpg" alt="School Age Class">
+              <h5>School Age Classes</h5>
+              <a href="./swimlevels.html#schoolAge" class="button expanded button-styling">Learn More</a>
+            </div>
+            <div class="cell">
+              <img class="thumbnail" src="./assets/images/masters-swimmer.jpg" alt="Competitive Swim Class">
+              <h5>Competitive</h5>
+              <a href="./swimlevels.html#competitiveSwim" class="button expanded button-styling">Learn More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <hr>
+      <hr>
+    </div>
+    <!-- upper footer for additional text or link elsewhere -->
+    <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+    <div class="topFooter style-header">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+          <div class="large-12 cell">
+            <div class="text-center">
+              <h3>Ready to register for class?</h3>
+
+              <!-- links for social media -->
+              <a class="register-link" href="contact.html">Click here for more information and registration!</a>
+              <div class="link-pic">
+                <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                  <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+                </a>
+              </div>
+              <div class="link-pic">
+                <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                  <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+                </a>
+              </div>
+              <div class="link-pic">
+                <a target="_blank" href="https://www.usaswimming.org/">
+                  <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end upper footer -->
+
+    <!-- bottom footer with image -->
+    <footer>
+      <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+        &copy; 2018 JSJ Enterprises
+      </div>
+    </footer>
+    <!-- end bottom footer -->
+
+  </div>
+
+  <!-- scripts for JS -->
+  <script src="./assets/js/vendor/jquery.js"></script>
+  <script src="./assets/js/vendor/what-input.js"></script>
+  <script src="./assets/js/vendor/foundation.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>

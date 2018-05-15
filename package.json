@@ -1,0 +1,31 @@
+{
+  "name": "JSJSwimSignUps",
+  "version": "1.0.0",
+  "description": "## Project 1 JSJSwim is a website for a swim lesson company that is located in central New Jersey.  The site includes a lesson request form, locations on a map view, FAQ and information for continued learning from home.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghSB17/JSJSwimSignUps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghSB17/JSJSwim--SignUps/issues"
+  },
+  "homepage": "https://github.com/ghSB17/JSJSwim--SignUps#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "nodemailer":"*",
+    "mysql2": "*",
+    "sequelize":"*",
+    "path": "*",
+    "fs": "*",
+    "express-handlebars": "*",
+    "express": "*",
+    "uuid": "*"
+  }
+}

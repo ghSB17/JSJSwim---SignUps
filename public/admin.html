@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSJ Swim School</title>
+
+  <!-- Connections to Foundation CSS files and custom css file -->
+  <link rel="stylesheet" href="./assets/css/foundation.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body>
+  <!-- top menu bar -->
+
+  <nav data-sticky-container>
+    <div data-sticky data-options="marginTop:0;">
+
+      <!-- Mobile menu  -->
+      <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+      </div>
+
+      <!-- Top bar Left (Company Logo) -->
+      <div class="grid-container">
+        <div class="top-bar" id="main-nav">
+
+          <div class="top-bar-left">
+            <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/locations">Locations</a>
+              </li>
+              <li>
+                <a href="/swimlevels">Swim Levels</a>
+                <ul class="menu vertical nested">
+                  <li>
+                    <a href="./swimlevels#parentChild">Parent/Child</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#preSchool">Pre-School</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#schoolAge">School Age</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#competitiveSwim">Competitive</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/learning">Extended Learning</a>
+              </li>
+              <a href="./contact">Contact Us</a>
+            </li>
+            <li class="active">
+              <a href="./login">Login</a>
+            </li>
+            <li>
+              <li>
+                <a href="./faq">FAQ</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="style-header text-center">
+          <h1>Administrator Login</h1>
+        </div>
+        <div class="text-box-sizing">
+          <p class="text-center">
+            create class descriptions and class instances
+            <br>
+          </p>
+        </div>
+        <br>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div> 
+            <h3>Class Description input</h3>
+          </div>
+            <div class="grid-x grid-padding-x">  
+                <div class="large-4 medium-4 cell">
+                  <label>Class Name</label>
+                  <input type="text" id="className" placeholder="Class Name" />
+                </div>
+                <div class="large-4 medium-4 cell">
+                  <label>Age Min</label>
+                  <input type="text" id="ageMin" placeholder="Age min, in numbers only " />
+                </div>
+                <div class="large-4 medium-4 cell">
+                  <label>Age Max</label>
+                  <input type="text" id="ageMax" placeholder="Age Max, in numbers only" />
+                </div>
+                <div class="large-4 medium-4 cell">
+                  <label>Length</label>
+                  <input type="text" id="length" placeholder="length in minutes" />
+                </div>
+              </div>
+
+
+          <!-- Error message -->
+          <div class="row">
+            <div class="grid-container">
+              <form data-abide novalidate>
+                <div data-abide-error class="alert callout" style="display: none;">
+                  <p>
+                    <i class="fi-alert"></i>There are some errors in your form.</p>
+                </div>
+                <div class="grid-x grid-padding-x">
+                  <form id="description-form">
+                      <div> 
+                          <h3>Class instance information</h3>
+                         </div>
+                    <div class="grid-x grid-padding-x">  
+                      <div class="large-4 medium-4 cell">
+                        <label>Week day</label>
+                        <input type="text" id="className" placeholder="Student's First Name" />
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                        <label>Start date</label>
+                        <input type="text" id="ageMin" placeholder="Student's Last Name" />
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                        <label>end date</label>
+                        <input type="text" id="ageMax" placeholder="Student's Age" />
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                        <label>seats total</label>
+                        <input type="text" id="length" placeholder="Student's Age" />
+                      </div>
+                      <div class="large-4 medium-4 cell">
+                          <label>seats filled</label>
+                          <input type="text" id="length" placeholder="Student's Age" />
+                        </div>
+                    </div>
+
+                    <!-- Subject with dropdown list of choices -->
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-12 cell">
+                        <label>Select Class</label>
+                        <select>
+                          <option value="parent">Parent/Child</option>
+                          <option value="preschool">Leap Frog</option>
+                          <option value="school">Pre-school Parrotfish</option>
+                          <option value="competitive">Clownfish</option>
+                          <option value="private">Tortoises</option>
+                          <option value="other">goldfish</option>
+                          <option value="other">Dolphins</option>
+                          <option value="other">Pre-comp Sharks</option>
+                          <option value="other">Masters Swim</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- Multi-line Message area with submit button -->
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-12 cell">
+                        <label>Your Message</label>
+                        <textarea placeholder="Type your message here" rows="4"></textarea>
+                      </div>
+                    </div>
+                    <br>
+                    <!-- Section to request Private Lessons -->
+                    <h6>
+                      <strong>
+                        <em>
+                          If you would like to Request Private Lesssons, please also fill in the following information:</em>
+                      </strong>
+
+                  </form>
+                  <!-- 
+                  var nameInput = $("#className")
+    var ageMinInput = $("#ageMin")
+    var ageMaxInput = $("#ageMax")
+    var legnthInput = $("#length")
+             -->
+                  </h6>
+
+
+
+
+                  <div class="large-6 medium-4 cell">
+                    <label>
+                      <h5>Swim lessons run between 4 - 8pm Monday - Friday and 9am to 12pm Saturday.
+                        <br> Select which days you are available to attend. Please check as many as apply.</h5>
+                    </label>
+                    <br>
+                    <div class="grid-x grid-padding-x">
+
+                    </div>
+
+                    <br>
+                    <div class="grid-x grid-padding-x">
+                      <div class="large-12 cell">
+                        <label>Please explain the student's current swimming ability including, do they put their face in the water?
+                          Can they swim laps? Please include any details you think may be important.</label>
+                        <textarea placeholder="Please tell us about the student's current swim capability." rows="3"></textarea>
+                      </div>
+                      <div class="large-12 cell">
+                        <label>Do you have any special requests? i.e. instructor preference, time preference, etc.</label>
+                        <textarea placeholder="Do you have any special requests?" rows="3"></textarea>
+                      </div>
+                    </div>
+                    <a href="#" class="button">Submit</a>
+                  </div>
+              </form>
+              </div>
+            </div>
+
+
+            <!-- upper footer for additional text or link elsewhere -->
+            <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+            <div class="topFooter style-header">
+              <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                  <div class="large-12 cell">
+                    <div class="text-center">
+                      <h3>Ready to register for class?</h3>
+
+                      <!-- links for social media -->
+                      <a class="register-link" href="contact">Click here for more information and registration!</a>
+                      <div class="link-pic">
+                        <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                          <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+                        </a>
+                      </div>
+                      <div class="link-pic">
+                        <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                          <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+                        </a>
+                      </div>
+                      <div class="link-pic">
+                        <a target="_blank" href="https://www.usaswimming.org/">
+                          <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end upper footer -->
+
+            <!-- bottom footer with image -->
+            <footer>
+              <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+                &copy; 2018 JSJ Enterprises
+              </div>
+            </footer>
+            <!-- end bottom footer -->
+          </div>
+
+          <!-- scripts for JS -->
+          <script src="./assets/js/vendor/jquery.js"></script>
+          <script src="./assets/js/vendor/what-input.js"></script>
+          <script src="./assets/js/vendor/foundation.js"></script>
+          <script src="./assets/js/app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+          <script src="https://code.jquery.com/jquery.js"></script>
+
+          <script src="./assets/js/contact.js"></script>
+
+</body>
+
+</html>

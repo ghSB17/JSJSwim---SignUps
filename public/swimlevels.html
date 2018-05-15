@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSJ Swim School</title>
+
+  <!-- Connections to Foundation CSS files and custom css file -->
+  <link rel="stylesheet" href="./assets/css/foundation.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body>
+   <!-- top menu bar -->
+   <nav data-sticky-container id="top">
+      <div data-sticky data-options="marginTop:0" data-sticky-on="small">
+  
+        <!-- Mobile menu  -->
+        <div class="title-bar nav-bar-style" data-responsive-toggle="main-nav" data-hide-for="large">
+          <button class="menu-icon" id="hamburger-menu" type="button" data-toggle="main-nav"></button>
+          <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+        </div>
+
+      <!-- Top bar Left (Company Logo) -->
+      <div class="grid-container nav-bar-style">
+          <div class="top-bar" id="main-nav">
+            <div class="top-bar-left">
+              <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+            </div>
+
+          <!-- Navigation Menu -->
+          <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/locations">Locations</a>
+              </li>
+              <li>
+                <a href="/swimlevels">Swim Levels</a>
+                <ul class="menu vertical nested">
+                  <li>
+                    <a href="./swimlevels#parentChild">Parent/Child</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#preSchool">Pre-School</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#schoolAge">School Age</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#competitiveSwim">Competitive</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/learning">Extended Learning</a>
+              </li>
+              <li class="active">
+                <a href="./contact">Contact Us</a>
+              </li>
+              <li>
+                  <a href="./login">Login</a>
+                </li>
+                <li>
+                  <a href="./faq">FAQ</a>
+                </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- top full length tox box for swim levels -->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="style-header text-center">
+          <h1>Swim Levels</h1>
+        </div>
+
+        <div class="text-box-sizing">
+          <h3 class="text-center">Swim Classes for Each Age and Ability Level</h3>
+          <p class="text-center">
+            <span id="parentChild"></span>
+            As your swimmer progresses, our lessons have a class that will continue to push the student. An equal emphasis is placed
+            on technique as well as endurance. One week prior to registration for the upcoming session your instructor will
+            give a progress report recommending the next sessions' placement. Below is an outline of the skills covered
+            for each level. For initial placement to classes please contact us for a 5 minute swim evalation.
+            <br>
+          </p>
+        </div>
+
+
+        <!-- top of the grid container to create margins from the size. ODD -->
+        <div class="grid-container fluid">
+          <!-- line one parent child -->
+
+          <div class="odd-level">
+            <div class="grid-x grid-margin-x grid-padding-x level-row">
+              <div class="cell small-12 medium-4 large-4 imageBox">
+                <img src="./assets/images/parent-child-class.jpg" alt="pre-school swim image">
+              </div>
+
+              <div class="cell small-12 medium-8 large-8 levelDescription" id="parent-child">
+                <h3 class="title">Parent with Child Classes</h3>
+                <h6 class="highlighted-info">
+
+                  <br>
+                  <strong>Age range:</strong> 6 months - 3 years
+                  <br>
+                  <strong>Ratio:</strong> 1:10 instructor to child
+                  <br>
+                  <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+
+                <p>The main goal of parent child classes is to teach water comfort and water safety. The parent will be in the
+                  water with the child practicing skills through song and games. Goals include back floating, basic forward
+                  movement, confidence in jumping then returning to the wall, and learning how to be safe by the pool.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- line two leap frog EVEN-->
+          <div class="grid-x grid-margin-x grid-padding-x level-row">
+            <div class="cell small-12 medium-4 large-4 imageBox">
+              <img src="./assets/images/leap-frog-swim-level.png" alt="leap frog logo">
+            </div>
+
+            <div class="cell small-12 medium-8 large-8 levelDescription" id="leap-frog">
+              <h3 class="title">Leap Frog</h3>
+              <h6 class="highlighted-info">
+                <strong>Age range:</strong> 2.5 - 4 years
+                <br>
+                <span id="preSchool"></span>
+                <strong>Ratio:</strong> 1:10 instructor to child
+                <br>
+                <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+              <p>Leap frog is the perfect class for children who are hesitant to separate from their parent. The first week
+                will be a parent child class allowing the child time to get used to the new environment of the pool with
+                the familiarity of the parent. Week 2 we begin to have the child separate from the parent to the instructor.
+                Week 3-6 we will begin to have the parent leave the pool, then leave the pool deck so that the child is ready
+                for their independent class without the parent.
+              </p>
+            </div>
+          </div>
+
+          <!-- line three pre-school aquatics ODD -->
+          <div class="odd-level">
+            <div class="grid-x grid-margin-x grid-padding-x level-row">
+              <div class="cell small-12 medium-4 large-4 imageBox">
+                <img src="./assets/images/pre-school-parrotfish.png" alt="tortoise swim image">
+              </div>
+
+              <div class="cell small-12 medium-8 large-8 levelDescription" id="pre-school">
+                <h3 class="title">Pre-School Parrotfish</h3>
+                <h6 class="highlighted-info">
+                  <strong>Age range:</strong> 3 - 4 years
+                  <br>
+                  <span id="schoolAge"></span>
+                  <strong>Ratio:</strong> 1:3 instructor to child
+                  <br>
+                  <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+                <p>The goal of preschool aquatics is to allow for water comfort and the beginning steps of independent swimming.
+                  Children will learn to float, kick and move their arms in the water. Class will also cover water safety
+                  around the pool or ocean.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Line four clown fish aquatics EVEN -->
+          <div class="grid-x grid-margin-x grid-padding-x level-row">
+            <div class="cell small-12 medium-4 large-4 imageBox">
+              <img src="./assets/images/clownfish-swim-level.png" alt="clownfish swim image">
+            </div>
+
+            <div class="cell small-12 medium-8 large-8 levelDescription" id="clownfish">
+              <h3 class="title">Level 1: Clownfishes </h3>
+              <h6 class="highlighted-info">
+                <strong>Age range:</strong> 5 - 10 years old
+                <br>
+                <strong>Ratio:</strong> 1:5 instructor to child
+                <br>
+                <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+              <p>The clownfishes can move and grove in the water just like nemo, but like nemo, need more practice and time
+                to grow. These swimmers are learning the importance of side breathing for freestyle. The arms are introduced
+                for the backstroke and the breaststroke. The students will learn the elementary backstroke. Strokes covered:
+                Freestyle, backstroke, elementary Backstroke
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Line five tortoise Level ODD -->
+        <div class="odd-level">
+          <div class="grid-x grid-margin-x grid-padding-x level-row">
+            <div class="cell small-12 medium-4 large-4 imageBox">
+              <img src="./assets/images/tortoise-swim-level.png" alt="tortoise swim image">
+            </div>
+
+            <div class="cell small-12 medium-8 large-8 levelDescription" id="tortoise">
+              <h3 class="title">Level 2: Tortoises</h3>
+              <h6 class="highlighted-info">
+                <strong>Age range:</strong> 5 - 10 years
+                <br>
+                <strong>Ratio:</strong> 1:4 instructor to child
+                <br>
+                <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+              <p>Slow and steady wins this race! In level 1 we work on the foundation of swimming, breathing through the freestyle
+                stroke. To graduate each student needs to be able to swim independently on their front and back for 10 yards.
+                Strokes learned: Basic front movement, back sculling
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- line six goldfish EVEN-->
+        <div class="grid-x grid-margin-x grid-padding-x level-row">
+          <div class="cell small-12 medium-4 large-4 imageBox">
+            <img src="./assets/images/goldfish-swim-level.png" alt="goldfish swim image">
+          </div>
+
+          <div class="cell small-12 medium-8 large-8  levelDescription" id="goldfish">
+            <h3 class="title">Level 3: Goldfish</h3>
+            <h6 class="highlighted-info">
+              <strong>Age range:</strong> 6 - 10 years
+              <br>
+              <strong>Ratio:</strong> 1:3 instructor to child
+              <br>
+              <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+            <p>The goal of preschool aquatics is to allow for water comfort and the beginning steps of independent swimming.
+              Children will learn to float, kick and move their arms in the water. Class will also cover water safety around
+              the pool or ocean.
+            </p>
+          </div>
+        </div>
+        <!-- line seven Dolphins ODD-->
+        <div class="odd-level">
+          <div class="grid-x grid-margin-x grid-padding-x level-row">
+            <div class="cell small-12 medium-4 large-4 imageBox">
+              <img src="./assets/images/dolphin-swim-level.png" alt="dolphin swim image">
+            </div>
+
+            <div class="cell small-12 medium-8 large-8 levelDescription" id="dolphins">
+              <h3 class="title">Level 4: Dolphins</h3>
+              <h6 class="highlighted-info">
+                <strong>Age range:</strong> 6 - 10 years
+                <br>
+                <strong>Ratio:</strong> 1:6 instructor to child
+                <br>
+                <strong>Time frame:</strong> 45 minutes, 10 weeks</h6>
+              <p>Dolphins are able to swim freestyle, backstroke and breaststroke at the time they enter the class. Level 3
+                will be learning the dolphin kick and full butterfly stroke. All strokes will be practiced with endurance
+                training and getting the swimmer ready for a team environment.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- line Eight sharks EVEN-->
+        <div class="grid-x grid-margin-x grid-padding-x level-row">
+          <div class="cell small-12 medium-4 large-4 imageBox">
+            <img src="./assets/images/shark-swim-level.png" alt="shark swim image">
+          </div>
+
+          <div class="cell small-12 medium-8 large-8 levelDescription" id="shark">
+            <h3 class="title">Pre-competitive: Sharks</h3>
+            <h6 class="highlighted-info">
+              <strong>Age range:</strong> 8 - 14 years
+              <br>
+              <span id="competitiveSwim"></span>
+              <strong>Ratio:</strong> 1:10 instructor to child
+              <br>
+              <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+            <p>Pre-comp is a class for those who are looking to try out for a swim team. This class will fine tune stroke mechanics,
+              work on endurance, starting dives, flip turns and other elements specific to swim team. To begin this class
+              you must try out and be accepted. The swimmer will have a full understanding of freestyle, backstroke, and
+              breaststroke.
+            </p>
+          </div>
+        </div>
+        <!-- line Nine masters swim ODD-->
+        <div class="odd-level">
+          <div class="grid-x grid-margin-x grid-padding-x level-row">
+            <div class="cell small-12 medium-4 large-4 imageBox">
+              <img src="./assets/images/masters-swimmer.jpg" alt="masters swim image">
+            </div>
+
+            <div class="cell small-12 medium-8 large-8 levelDescription" id="masters">
+              <h3 class="title">Masters Swim:</h3>
+              <h6 class="highlighted-info">
+                <strong>Age range:</strong> 18 - 98 years
+                <br>
+                <strong>Ratio:</strong> 8 swimmers per lane.
+                <br>
+                <strong>Time frame:</strong> 30 minutes, 10 week session</h6>
+              <p>Masters swim is our adult swim team program with a coach on deck for all workout times. Lanes will be separated
+                based on speed and competing age range. This program is meant for adults who enjoy intense workouts with
+                other swimmers as motivation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- upper footer for additional text or link elsewhere -->
+        <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+        <div class="topFooter style-header">
+          <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+              <div class="large-12 cell">
+                <div class="text-center">
+                  <h3>Ready to register for class?</h3>
+                  <!-- links for social media -->
+                  <a class="register-link" href="contact.html">Click here for more information and registration!</a>
+                  <div class="link-pic">
+                    <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                      <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+                    </a>
+                  </div>
+                  <div class="link-pic">
+                    <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                      <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+                    </a>
+                  </div>
+                  <div class="link-pic">
+                    <a target="_blank" href="https://www.usaswimming.org/">
+                      <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end upper footer -->
+
+        <!-- bottom footer with image -->
+        <footer>
+          <div class="wrap row small-up-1 medium-up-3">
+            <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+              &copy; 2018 JSJ Enterprises
+            </div>
+          </div>
+        </footer>
+        <!-- end bottom footer -->
+
+
+        <!-- scripts for JS -->
+        <script src="./assets/js/vendor/jquery.js"></script>
+        <script src="./assets/js/vendor/what-input.js"></script>
+        <script src="./assets/js/vendor/foundation.js"></script>
+        <script src="./assets/js/app.js"></script>
+<script>
+$('.local-link').click(function() {
+  $('#hamburger-menu').trigger('click');
+});
+
+
+  </script>
+
+</body>
+
+</html>

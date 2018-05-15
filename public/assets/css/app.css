@@ -1,0 +1,195 @@
+/* Custom CSS file for JSJ Swim*/
+
+/* Screen sizes for menu */
+@media screen and (max-width: 39.9375em) {
+  .no-js .top-bar {
+    display: none;
+  }
+}
+
+@media print,
+screen and (min-width: 40em) {
+  .no-js .title-bar {
+    display: none;
+    font-size: 10px;
+  }
+}
+
+/* Sticky top menu */
+[data-sticky] {
+  width: 100%;
+}
+
+.sticky-container {
+  z-index: 5;
+}
+.txtLeft {
+  text-align: left;
+  
+/* Adjust font size for main nav */
+}
+#main-nav {
+  font-size: 14px;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* this 'a' tag needs to be added into a class for the white space behind the a tags in the footer to go away. */
+a {
+  background-color: White;
+}
+
+/* Header styles */
+h1 {
+  font-style: bold;
+}
+
+h5 {
+  text-align: center;
+}
+
+/* margins for the thumbnails used on the Home page */
+.thumbnail {
+  margin-bottom: 2px;
+}
+
+/* white background for the navigation bar - default is light gray */
+.top-bar {
+  background-color: white;
+}
+
+/* css added for swim level page */
+
+/* top layer */
+
+.level-row {
+  /* border-bottom: 1px solid gray; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* margin: 20px; */
+}
+
+.imageBox {
+  margin: 10px;
+}
+
+/* footer */
+
+.footer-image {
+  background-image: url("../images/wave-banner-long.jpg");
+  height: 90px;
+  width: auto;
+}
+
+/* logo size for all pages */
+.logo {
+  width: 200px;
+}
+
+/* page identification used on all sub pages */
+.style-header {
+  color: rgb(223, 243, 243);
+  background-color: rgb(25, 118, 210);
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  
+}
+
+.intro-text {
+  padding: 20px;
+  margin-bottom: 20px;
+  margin: 15px;
+}
+
+#main-nav {
+  border-bottom: 1px solid gray;
+}
+#top{
+  top:0rem;
+  padding-top:0;
+  margin-top:0;
+}
+ 
+/* formatting for class levels */
+.odd-level {
+  background-color: rgb(199, 220, 247);
+}
+
+.end-prompt {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.text-box-sizing {
+  padding: 20px;
+}
+
+/* formatting for map on Locations page */
+#mapSection{
+  align-content: space-around;
+  height:75vh;
+  width:100%;
+  /* padding: 5%; */
+  position:inherit;
+}
+
+/* hover effect for nav menu */
+a:hover {
+  text-decoration:underline;
+}
+
+/* space to separate contact from from rest of page content */
+.contact {
+  padding-top: 20px;
+}
+
+/* footer with info edits */
+.link-pic {
+  display: inline;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.register-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topFooter {
+  margin-top:70px;
+}
+/* below gets rid of the white link in footer */
+.topFooter a {
+  background-color:  rgb(25, 118, 210);
+
+}
+
+/* adjust button colors to match other colors on the page */
+.button.primary {
+  background-color: rgb(25, 118, 210);
+  color: #fefefe; }
+
+  .button-styling {
+    background-color: rgb(25, 118, 210);
+    color: #fefefe;
+  }
+
+  /* this part allows the mobile version to not show 2 logos */
+  @media (max-width: 1024px) {
+    .hide-logo-mobile  {
+        display:none;
+    }
+}
+
+/* format for error on contact page */
+.form-error {
+  padding-left: 5px;
+  padding-top: 5px;
+}
+

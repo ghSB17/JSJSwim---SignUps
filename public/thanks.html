@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSJ Swim School</title>
+
+  <!-- Connections to Foundation CSS files and custom css file -->
+  <link rel="stylesheet" href="./assets/css/foundation.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body>
+  <!-- top menu bar -->
+
+
+  <nav data-sticky-container>
+    <div data-sticky data-options="marginTop:0;">
+
+      <!-- Mobile menu  -->
+      <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+      </div>
+
+      <!-- Top bar Left (Company Logo) -->
+      <div class="grid-container">
+
+        <div class="top-bar" id="main-nav">
+          <div class="top-bar-left">
+            <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <li class="active">
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <li>
+                <a href="./aboutus.html">About Us</a>
+              </li>
+              <li>
+                <a href="./locations.html">Locations</a>
+              </li>
+              <li>
+                <a href="./swimlevels.html">Swim Levels</a>
+                <ul class="menu vertical nested">
+                  <li>
+                    <a href="./swimlevels.html#parentChild">Parent/Child</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels.html#preSchool">Pre-School</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels.html#schoolAge">School Age</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels.html#competitiveSwim">Competitive</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="./learning.html">Extended Learning</a>
+              </li>
+              <li>
+                <a href="./contact.html">Contact Us</a>
+              </li>
+              <li>
+                  <a href="./login">Login</a>
+                </li>
+              <li>
+                <a href="./faq.html">FAQ</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+
+  <!-- Sliders that appear under the Navigation for Home Page -->
+  <div class="orbit clean-hero-slider" role="region" aria-label="Favorite Space Pictures" data-orbit>
+    <div class="orbit-wrapper">
+      <div class="orbit-controls">
+        <button class="orbit-previous">
+          <span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+        <button class="orbit-next">
+          <span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+      </div>
+      <ul class="orbit-container">
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/images/swimmer-banner-boy-cut.jpg" alt="Boy swimming">
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/images/instructor-banner.jpg" alt="instructor and chld">
+          </figure>
+        </li>
+        <li class="orbit-slide">
+          <figure class="orbit-figure">
+            <img class="orbit-image" src="./assets/images/facility-banner.jpg" alt="facility">
+          </figure>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Thank you screen for submitting a question to be added to FAQ -->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div style="text-align:center">
+          <h2>Thank You For Your Submission!</h2>
+          <h4>We will get back to You Soon!</h4>
+        </div>
+        <br>
+
+
+      </div>
+    </div>
+    <!-- upper footer for additional text or link elsewhere -->
+    <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+    <div class="topFooter style-header">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+          <div class="large-12 cell">
+            <div class="text-center">
+              <h3>Ready to register for class?</h3>
+              <!-- links for social media -->
+              <a class="register-link" href="contact.html">Click here for more information and registration!</a>
+              <div class="link-pic">
+                <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                  <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+                </a>
+              </div>
+              <div class="link-pic">
+                <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                  <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+                </a>
+              </div>
+              <div class="link-pic">
+                <a target="_blank" href="https://www.usaswimming.org/">
+                  <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end upper footer -->
+
+
+
+    <!-- bottom footer with image -->
+    <footer>
+      <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+        &copy; 2018 JSJ Enterprises
+      </div>
+    </footer>
+    <!-- end bottom footer -->
+
+
+    <!-- scripts for JS -->
+    <script src="./assets/js/vendor/jquery.js"></script>
+    <script src="./assets/js/vendor/what-input.js"></script>
+    <script src="./assets/js/vendor/foundation.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>

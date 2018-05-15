@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSJ Swim School</title>
+
+  <!-- Connections to Foundation CSS files and custom css file -->
+  <link rel="stylesheet" href="./assets/css/foundation.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+
+<body>
+  <!-- top menu bar -->
+
+  <nav data-sticky-container>
+    <div data-sticky data-options="marginTop:0;">
+
+
+      <!-- Mobile menu  -->
+      <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+      </div>
+
+      <!-- Top bar Left (Company Logo) -->
+      <div class="grid-container">
+        <div class="top-bar" id="main-nav">
+          <div class="top-bar-left">
+            <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/locations">Locations</a>
+              </li>
+              <li>
+                <a href="/swimlevels">Swim Levels</a>
+                <ul class="menu vertical nested">
+                  <li>
+                    <a href="./swimlevels#parentChild">Parent/Child</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#preSchool">Pre-School</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#schoolAge">School Age</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#competitiveSwim">Competitive</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/learning">Extended Learning</a>
+              </li>
+              <li class="active">
+                <a href="./contact">Contact Us</a>
+              </li>
+              <li>
+                  <li>
+                      <a href="./login">Login</a>
+                    </li>
+                <li>
+                  <a href="./faq">FAQ</a>
+                </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Display section for Map -->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="style-header text-center">
+          <h1>Locations</h1>
+        </div>
+        <div class="text-box-sizing">
+            <h3 class="text-center">Click on a location for contact information.</h3>
+            <p class="text-center">
+              Swim lessons are currently available in the following locations. 
+              <br>
+            </p>
+          </div>
+
+
+
+        <div class="row">
+          <div class="grid-container">
+            <div id="mapSection">
+            </div>
+          </div>
+        </div>
+
+        <!-- upper footer for additional text or link elsewhere -->
+    <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="topFooter style-header">
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+                <div class="large-12 cell">
+                  <div class="text-center">
+                    <h3>Ready to register for class?</h3>
+                    <!-- links for social media -->
+                    <a class="register-link" href="contact.html">Click here for more information and registration!</a>
+                    <div class="link-pic">
+                      <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                        <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+                      </a>
+                    </div>
+                    <div class="link-pic">
+                      <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                        <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+                      </a>
+                    </div>
+                    <div class="link-pic">
+                      <a target="_blank" href="https://www.usaswimming.org/">
+                        <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- end upper footer -->
+
+  <!-- bottom footer with image -->
+  <footer>
+    <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+      &copy; 2018 JSJ Enterprises
+    </div>
+  </footer>
+  <!-- end bottom footer -->
+</div>
+  <!-- scripts for JS -->
+
+  <script src="./assets/js/vendor/jquery.js"></script>
+  <script src="./assets/js/vendor/what-input.js"></script>
+  <script src="./assets/js/vendor/foundation.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpZp25lr8vvjPkK0GrWL-P089Vqrjo3a0&callback=initMap" async
+    defer></script>
+  <script src="./assets/js/locationsJS.js"></script>
+</body>
+
+</html>
