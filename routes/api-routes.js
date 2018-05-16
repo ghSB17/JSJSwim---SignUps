@@ -1,8 +1,15 @@
 var db = require("../models");
-
+var passport=require("../config/passport");
 // Routes
-// =============================================================
+// ============================================================
+
 module.exports = function(app) {
+
+  app.post("/api/signin", passport.authenticate("local"), function(req,res){
+    console.log(req.user);
+    res.json("/locations");
+  })
+
   app.get("/api/description", function(req, res) {
     db.Class_description.findAll({
       include: [db.instance]//adding the coresponding instance folder.

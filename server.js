@@ -6,6 +6,10 @@ var bodyParser = require("body-parser");
 var exphbs = require('express-handlebars');
 var uuid = require("uuid");
 
+//To include Passport//
+var passport   = require('./config/passport')
+var session    = require('express-session')
+//end of new inclusions//
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -17,6 +21,13 @@ var db = require("./models");
 //setup express app for data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+// For Passport //
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+ 
+app.use(passport.initialize());
+app.use(passport.session()); 
+// persistent login sessions//
 
 // Static directory
 app.use(express.static("public"));
@@ -37,7 +48,7 @@ require("./routes/registeredUser-api-routes")(app,db);
 require("./routes/user-api-routes")(app,db);
 
 // Syncing our sequelize models and then starting our Express app
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({force:true}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT localhost:" + PORT);
   });

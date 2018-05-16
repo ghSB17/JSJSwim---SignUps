@@ -86,31 +86,13 @@
     <div class="grid-x grid-padding-x">
       <div class="large-12 cell">
         <div class="style-header text-center">
-          <h1>Contact Us</h1>
+          <h1>Register/Create a Login</h1>
         </div>
         <div class="text-box-sizing">
           <h3 class="text-center">Fill out the information below.</h3>
-          <p class="text-center">
-            For more information and Private lessons.
-            <br>
-          </p>
         </div>
 
         <!-- end second header -->
-
-        <!-- <a href="#" data-open="myModal">Click Me For A Modal</a> -->
-
-        <img data-open="myModal" src="./assets/images/login.gif" alt="User Profile">
-
-
-        <div id="myModal" class="reveal" data-reveal>
-          <h2 id="modalTitle">Awesome. I have it.</h2>
-          <p class="lead">Your couch. It is mine.</p>
-          <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-          <button class="close-button" data-close aria-label="Close modal" type="button">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
 
         <div class="row">
           <div class="grid-container">
@@ -123,122 +105,92 @@
                 <div class="large-4 medium-4 cell">
                   <!-- First and last names -->
                   <label>Parent / Guardian First Name</label>
-                  <input type="text" placeholder="Parent's First Name" aria-describedby="ParentName" required pattern="text">
+                  <input type="text" id="fname" placeholder="Parent's First Name" aria-describedby="Parent First Name" required pattern="text">
                   <span class="form-error">
-                    Yo, you had better fill this out, it's required.
+                    Please fill this out, it's required.
                   </span>
                 </div>
                 <div class="large-4 medium-4 cell">
                   <label>Parent / Guardian Last Name</label>
-                  <input type="text" placeholder="Parent's Last Name" />
+                  <input type="text" id="lname" placeholder="Parent's Last Name" />
+                </div>
                 </div>
                 <!-- email with verification -->
+                <div class="grid-x grid-padding-x">
                 <div class="large-4 medium-4 cell">
                   <div class="grid-x">
                     <label>Parent / Guardian Email Address</label>
                     <div class="input-group">
-                      <input type="email" placeholder="name@domain.com" aria-describedby="emailaddress" required pattern="email">
+                      <input type="email" id="email" placeholder="name@domain.com" aria-describedby="emailaddress" required pattern="email">
                       <span class="form-error">
                         Enter a valid email address.
                       </span>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- Subject with dropdown list of choices -->
-              <div class="grid-x grid-padding-x">
-                <div class="large-12 cell">
-                  <label>Subject</label>
-                  <select>
-                    <option value="parent">Parent/Child</option>
-                    <option value="preschool">Pre-School</option>
-                    <option value="school">School Age</option>
-                    <option value="competitive">Competitive</option>
-                    <option value="private">Private Lessons</option>
-                    <option value="other">Other</option>
-                  </select>
                 </div>
+                <div class="grid-x grid-padding-x">
+                <div class="large-4 medium-4 cell">
+                    <!-- First Password -->
+                    <label>Password</label>
+                    <input type="password" id="pwd1" placeholder="******" aria-describedby="password" required >
+                    <span class="form-error">
+                      Please fill this out, it's required.
+                    </span>
+                  </div>
+                  <div class="large-4 medium-4 cell">
+                    <label>Reenter Password</label>
+                    <input type="password" id="pwd2" placeholder="*****" />
+                    <span class="form-error">
+                        Please fill this out, it's required.
+                      </span>
+                  </div>
               </div>
-              <!-- Multi-line Message area with submit button -->
-              <div class="grid-x grid-padding-x">
-                <div class="large-12 cell">
-                  <label>Your Message</label>
-                  <textarea placeholder="Type your message here" rows="4"></textarea>
-                </div>
-              </div>
-              <br>
-              <h6>
-                <strong>
-                  <em>
-                    If you would like to Request Private Lesssons, please also fill in the following information:</em>
-                </strong>
-              </h6>
               <div class="grid-x grid-padding-x">
                 <div class="large-4 medium-4 cell">
-                  <label>Student's First Name</label>
-                  <input type="text" placeholder="Student's First Name" />
+                  <!-- Address  -->
+                  <label>Address</label>
+                  <input type="text" id="address1" placeholder="House Number 100" aria-describedby="Address1" required pattern="text">
+                  <span class="form-error">
+                    Please fill this out, it's required.
+                  </span>
                 </div>
                 <div class="large-4 medium-4 cell">
-                  <label>Student's Last Name</label>
-                  <input type="text" placeholder="Student's Last Name" />
+                  <label>Address1</label>
+                  <input type="text" id="address2" placeholder="Some Road/Blvd/Street" />
                 </div>
-                <div class="large-4 medium-4 cell">
-                  <label>Student's Age</label>
-                  <input type="text" placeholder="Student's Age" />
                 </div>
 
-              </div>
-              <div class="large-6 medium-4 cell">
-                <label>
-                  <h5>Swim lessons run between 4 - 8pm Monday - Friday and 9am to 12pm Saturday.
-                    <br> Select which days you are available to attend. Please check as many as apply.</h5>
-                </label>
-                <br>
                 <div class="grid-x grid-padding-x">
-                  <div class="large-12 cell">
-                    <label>Location</label>
-                    <select name='locations' id='selectLocations'>
-                      <option value="e-brunswick">East Brunswick</option>
-                      <option value="kendall">Kendall Park</option>
-                      <option value="metuchen">Metuchen</option>
-                      <option value="old-bridge">Old Bridge</option>
-                      <option value="parlin">Parlin</option>
-                      <option value="perth">Perth Amboy</option>
-                      <option value="somerville">Somerville</option>
-                      <option value="s-amboy">South Amboy</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <input id="checkbox1" type="checkbox">
-                  <label for="checkbox1">Monday</label>
-                  <input id="checkbox2" type="checkbox">
-                  <label for="checkbox2">Tuesday</label>
-                  <input id="checkbox3" type="checkbox">
-                  <label for="checkbox3">Wednesday</label>
-                  <input id="checkbox4" type="checkbox">
-                  <label for="checkbox4">Thursday</label>
-                  <input id="checkbox5" type="checkbox">
-                  <label for="checkbox5">Friday</label>
-                  <input id="checkbox6" type="checkbox">
-                  <label for="checkbox6">Saturday</label>
-                </div>
-                <br>
-                <div class="grid-x grid-padding-x">
-                  <div class="large-12 cell">
-                    <label>Please explain the student's current swimming ability including, do they put their face in the water?
-                      Can they swim laps? Please include any details you think may be important.</label>
-                    <textarea placeholder="Please tell us about the student's current swim capability." rows="3"></textarea>
-                  </div>
-                  <div class="large-12 cell">
-                    <label>Do you have any special requests? i.e. instructor preference, time preference, etc.</label>
-                    <textarea placeholder="Do you have any special requests?" rows="3"></textarea>
-                  </div>
-                </div>
-                <a href="#" class="button">Submit</a>
+                    <div class="large-4 medium-4 cell">
+                      <!-- City State ZIP -->
+                      <label>City</label>
+                      <input type="text" id="city" placeholder="City" aria-describedby="city`" required pattern="text">
+                      <span class="form-error">
+                        Please fill this out, it's required.
+                      </span>
+                    </div>
+                    <div class="large-4 medium-4 cell">
+                      <label>State</label>
+                      <input type="text" id="state" placeholder="NJ" />
+                      <span class="form-error">
+                        Please fill this out, it's required.
+                      </span>
+                    </div>
+                    <div class="large-4 medium-4 cell">
+                        <label>ZIP</label>
+                        <input type="text" id="zip" placeholder="08790" />
+                        <span class="form-error">
+                          Please fill this out, it's required.
+                        </span>
+                      </div>
+                    </div>
+              
+                <a href="#" id="btnSubmit" class="button" >Submit</a>
               </div>
             </form>
           </div>
+        </div>
         </div>
 
 
@@ -286,16 +238,17 @@
       </div>
 
       <!-- scripts for JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://code.jquery.com/jquery.js"></script>
+
       <script src="./assets/js/vendor/jquery.js"></script>
       <script src="./assets/js/vendor/what-input.js"></script>
       <script src="./assets/js/vendor/foundation.js"></script>
       <script src="./assets/js/app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      <script src="https://code.jquery.com/jquery.js"></script>
-
-      <script src="./assets/js/contact.js"></script>
+      
+      <script src="./assets/js/signUp.js"></script>
 
 </body>
 

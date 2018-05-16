@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/ghSB17/JSJSwim--SignUps#readme",
   "dependencies": {
+    "bcrypt-nodejs": "*",
+    "passport-local": "*",
+    "express-session": "*",
+    "passport": "*",
     "body-parser": "*",
     "nodemailer": "*",
     "mysql2": "*",

@@ -1,25 +1,22 @@
+var bcrypt = require('bcrypt-nodejs');
+
 module.exports = function (sequelize, DataTypes) {
 
     var RegisteredUser = sequelize.define("RegisteredUser", {
         "ruId": {
             type: DataTypes.STRING.BINARY,
             allowNull: false,
-            defaultValue:DataTypes.UUIDV1,
+            defaultValue: DataTypes.UUIDV1,
             primaryKey: true
         },
         "firstName": {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: true
-            }
         },
         lastName: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: true
-            }
+
         },
         email: {
             type: DataTypes.STRING,
@@ -31,14 +28,14 @@ module.exports = function (sequelize, DataTypes) {
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                is: ["^[a-zA-Z0-9]+$",'i']
-            }
+            // validate: {
+            //     is: ["^[a-zA-Z0-9]+$", 'i']
+            // }
         },
         admin: {
-            type:DataTypes.BOOLEAN,
-            allowNull:false,
-            defaultValue:false
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
         },
         address1: {
             type: DataTypes.STRING,
@@ -50,23 +47,17 @@ module.exports = function (sequelize, DataTypes) {
         city: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: true
-            }
         },
         state: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isAlpha: true
-            }
         },
         zipCode: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                is: ["^[0-9-]+$",'i']
-            }
+            // validate: {
+            //     is: ["^[0-9-]+$", 'i']
+            // }
         }
 
     }, {
@@ -75,5 +66,13 @@ module.exports = function (sequelize, DataTypes) {
     RegisteredUser.associate = function (models) {
         RegisteredUser.hasMany(models.User)
     }
+    RegisteredUser.prototype.validPassword = function (password) {
+        return bcrypt.compareSync(password, this.password);
+    };
+    // Hooks are automatic methods that run during various phases of the User Model lifecycle
+    // In this case, before a User is created, we will automatically hash their password
+    RegisteredUser.hook("beforeCreate", function (registeredUser) {
+        registeredUser.password = bcrypt.hashSync(registeredUser.password, bcrypt.genSaltSync(10), null);
+    });
     return RegisteredUser;
 }
