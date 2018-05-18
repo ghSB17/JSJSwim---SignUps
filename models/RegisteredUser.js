@@ -28,9 +28,6 @@ module.exports = function (sequelize, DataTypes) {
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            // validate: {
-            //     is: ["^[a-zA-Z0-9]+$", 'i']
-            // }
         },
         admin: {
             type: DataTypes.BOOLEAN,
@@ -55,9 +52,10 @@ module.exports = function (sequelize, DataTypes) {
         zipCode: {
             type: DataTypes.STRING,
             allowNull: false,
-            // validate: {
-            //     is: ["^[0-9-]+$", 'i']
-            // }
+        },
+        phoneNumber: {
+            type:DataTypes.STRING,
+            allowNull:false
         }
 
     }, {

@@ -5,11 +5,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require('express-handlebars');
 var uuid = require("uuid");
+var mysql = require("mysql");
 
-//To include Passport//
-var passport   = require('./config/passport')
-var session    = require('express-session')
-//end of new inclusions//
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -22,13 +19,6 @@ var db = require("./models");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// For Passport //
-app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
- 
-app.use(passport.initialize());
-app.use(passport.session()); 
-// persistent login sessions//
-
 // Static directory
 app.use(express.static("public"));
 app.engine("handlebars", exphbs({
@@ -38,7 +28,9 @@ app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+require("./routes/descr-api-routes.js")(app);
+require("./routes/inst-api-routes.js")(app);
+
 
 //Routes to send email
 require("./routes/email-api-routes.js")(app,db);
@@ -48,7 +40,7 @@ require("./routes/registeredUser-api-routes")(app,db);
 require("./routes/user-api-routes")(app,db);
 
 // Syncing our sequelize models and then starting our Express app
-db.sequelize.sync({force:true}).then(function() {
+db.sequelize.sync({ }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT localhost:" + PORT);
   });

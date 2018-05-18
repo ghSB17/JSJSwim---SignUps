@@ -14,22 +14,22 @@
 </head>
 
 <body>
-  <!-- top menu bar -->
-  <nav data-sticky-container id="top">
-    <div data-sticky data-options="marginTop:0" data-sticky-on="small">
-
-      <!-- Mobile menu  -->
-      <div class="title-bar nav-bar-style" data-responsive-toggle="main-nav" data-hide-for="large">
-        <button class="menu-icon" id="hamburger-menu" type="button" data-toggle="main-nav"></button>
-        <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
-      </div>
+   <!-- top menu bar -->
+   <nav data-sticky-container id="top">
+      <div data-sticky data-options="marginTop:0" data-sticky-on="small">
+  
+        <!-- Mobile menu  -->
+        <div class="title-bar nav-bar-style" data-responsive-toggle="main-nav" data-hide-for="large">
+          <button class="menu-icon" id="hamburger-menu" type="button" data-toggle="main-nav"></button>
+          <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+        </div>
 
       <!-- Top bar Left (Company Logo) -->
       <div class="grid-container nav-bar-style">
-        <div class="top-bar" id="main-nav">
-          <div class="top-bar-left">
-            <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
-          </div>
+          <div class="top-bar" id="main-nav">
+            <div class="top-bar-left">
+              <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+            </div>
 
           <!-- Navigation Menu -->
           <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
@@ -63,15 +63,15 @@
               <li>
                 <a href="/learning">Extended Learning</a>
               </li>
-              <li class="active">
+              <!-- <li class="active">
                 <a href="./contact">Contact Us</a>
-              </li>
+              </li> -->
               <li>
-                <a href="#" data-open="signInModal" id="liLogin">Login</a>
-              </li>
-              <li>
-                <a href="./faq">FAQ</a>
-              </li>
+                  <a href="/login">Login</a>
+                </li>
+                <li>
+                  <a href="./faq">FAQ</a>
+                </li>
           </ul>
         </div>
       </div>
@@ -93,8 +93,8 @@
             <span id="parentChild"></span>
             As your swimmer progresses, our lessons have a class that will continue to push the student. An equal emphasis is placed
             on technique as well as endurance. One week prior to registration for the upcoming session your instructor will
-            give a progress report recommending the next sessions' placement. Below is an outline of the skills covered for
-            each level. For initial placement to classes please contact us for a 5 minute swim evalation.
+            give a progress report recommending the next sessions' placement. Below is an outline of the skills covered
+            for each level. For initial placement to classes please contact us for a 5 minute swim evalation.
             <br>
           </p>
         </div>
@@ -359,11 +359,13 @@
         <script src="./assets/js/vendor/what-input.js"></script>
         <script src="./assets/js/vendor/foundation.js"></script>
         <script src="./assets/js/app.js"></script>
-        <script>
-          $('.local-link').click(function () {
-            $('#hamburger-menu').trigger('click');
-          });
-        </script>
+<script>
+$('.local-link').click(function() {
+  $('#hamburger-menu').trigger('click');
+});
+
+
+  </script>
 
 </body>
 

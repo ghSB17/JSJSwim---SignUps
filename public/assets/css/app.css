@@ -19,7 +19,6 @@ screen and (min-width: 40em) {
 [data-sticky] {
   width: 100%;
 }
-
 .sticky-container {
   z-index: 5;
 }
@@ -137,7 +136,13 @@ h5 {
   /* padding: 5%; */
   position:inherit;
 }
-
+#errors {
+  padding:5px;
+  background-color: lightcoral; 
+  border:.5px solid red;
+  color:black;
+  display:none;
+}
 /* hover effect for nav menu */
 a:hover {
   text-decoration:underline;

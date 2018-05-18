@@ -2,7 +2,8 @@
 module.exports = function (sequelize, DataTypes) {
     var Class_instance = sequelize.define("Class_instance", {
       //add the validation. 
-      Week_day: {
+      //check if week_day is capital Week anywhere?
+      week_day: {
         type: DataTypes.STRING
       },
       start_date: {

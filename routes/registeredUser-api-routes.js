@@ -1,5 +1,12 @@
+var passport=require("../config/passport");
+
 module.exports = function (app, db) {
 
+
+    app.post("/api/signin", passport.authenticate("local"), function (req, res) {
+        console.log(req.user);
+        res.json(req.user);
+    })
 
     app.get("/api/registeredUser", function (req, res) {
         db.RegisteredUser.findAll({

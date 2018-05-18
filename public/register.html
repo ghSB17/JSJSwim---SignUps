@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSJ Swim School</title>
+
+    <!-- Connections to Foundation CSS files and cusotm css file -->
+    <link rel="stylesheet" href="./assets/css/foundation.css">
+    <link rel="stylesheet" href="./assets/css/foundation.min.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+</head>
+
+<body>
+    <!-- top menu bar -->
+
+    <nav data-sticky-container>
+        <div data-sticky data-options="marginTop:0;">
+
+            <!-- Mobile menu  -->
+            <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+                <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+                <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+                <!-- <div class="title-bar-title">JSJ Swim School</div> -->
+            </div>
+
+            <!-- Top bar Left (Company Logo) -->
+            <div class="grid-container">
+                <div class="top-bar" id="main-nav">
+
+                    <div class="top-bar-left">
+                        <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+                    </div>
+
+                    <!-- Navigation Menu -->
+                    <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <li>
+                                <a href="./aboutus.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="./locations.html">Locations</a>
+                            </li>
+                            <li>
+                                <a href="./swimlevels.html">Swim Levels</a>
+                                <ul class="menu vertical nested">
+                                    <li>
+                                        <a href="./swimlevels.html#parentChild">Parent/Child</a>
+                                    </li>
+                                    <li>
+                                        <a href="./swimlevels.html#preSchool">Pre-School</a>
+                                    </li>
+                                    <li>
+                                        <a href="./swimlevels.html#schoolAge">School Age</a>
+                                    </li>
+                                    <li>
+                                        <a href="./swimlevels.html#competitiveSwim">Competitive</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./learning.html">Extended Learning</a>
+                            </li>
+                            <li>
+                                <a href="/login">Login</a>
+                            </li>
+                            <li>
+                                <li>
+                                    <a href="./faq.html">FAQ</a>
+                                </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--End of nav-bar-->
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <div class="style-header text-center">
+                    <h1>Register</h1>
+                </div>
+                <div class="text-box-sizing">
+                    <h3 class="text-center"></h3>
+                </div>
+                <!-- begining of the form-->
+
+
+                <form data-abide novalidate>
+                    <div class="grid-container">
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-2">
+                            </div>
+                            <div class="cell large-8" id="errors"></div>
+                            <div class="cell large-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-abide-error class="alert callout" style="display: none;">
+                        <p>
+                            <i class="fi-alert"></i> There are some errors in your form.</p>
+                    </div>
+                    <div class="grid-container">
+                        <div class="grid-x grid-margin-x">
+
+                            <div class="cell large-2">
+                            </div>
+                            <div class="cell small-12 large-8">
+                                <label>Email:
+                                    <input type="text" id="email" placeholder="address@domain.com" aria-describedby="exampleHelpText" required pattern="email">
+                                    <span class="form-error">
+                                        Please enter email, it's required.
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText">address@domain.com</p>
+                            </div>
+                            <div class="cell large-2"></div>
+                        </div>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-2"></div>
+                            <div class="cell small-12 large-4">
+                                <label>Password
+                                    <input type="password" id="password1" placeholder="yeti4preZ" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter your password, it's required!
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText">Enter a password please.</p>
+                            </div>
+                            <div class="cell small-12 large-4">
+                                <label>Re-enter Password
+                                    <input type="password" id="password2" placeholder="yeti4preZ" aria-describedby="exampleHelpText2" required pattern="alpha_numeric"
+                                        data-equalto="password">
+                                    <span class="form-error">
+                                        Passwords should match!
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText2">Enter a password please</p>
+                            </div>
+                            <div class="cell large-2"></div>
+                        </div>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-2">
+                            </div>
+                            <div class="cell small-12 large-4">
+                                <label>First Name:
+                                    <input type="text" placeholder="John" id="fname" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter your First Name, it's required.
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText">John</p>
+                            </div>
+                            <div class="cell small-12 large-4">
+                                <label>Last Name:
+                                    <input type="text" placeholder="Smith" id="lname" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter your Last Name, it's required.
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText">Smith</p>
+                            </div>
+                            <div class="cell large-2"></div>
+                        </div>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-2">
+                            </div>
+                            <div class="cell small-12 large-4">
+                                <label>Address:
+                                    <input type="text" id="address1" placeholder="100 Pleasant Way" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter your address, it's required.
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText">100 Pleasant Rd</p>
+                            </div>
+                            <div class="cell small-12 large-4">
+                                <label>Address2:
+                                    <input type="text" id="address2" placeholder="NE South Way" aria-describedby="exampleHelpText">
+                                </label>
+
+                            </div>
+                            <div class="cell large-2"></div>
+                        </div>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-2">
+                            </div>
+                            <div class="cell small-12 large-3">
+                                <label>City:
+                                    <input type="text" id="city" placeholder="City" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter city name.
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText">City</p>
+                            </div>
+                            <div class="cell small-12 large-3">
+                                <label>State:
+                                    <input type="text" id="state" placeholder="State" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter State.
+                                    </span>
+                            </div>
+                            <div class="cell small-12 large-2">
+                                <label>ZIP:
+                                    <input type="text" id="zipcode" placeholder="01234" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter Your ZIP Code.
+                                    </span>
+                                </label>
+                                <p class="help-text" id="exampleHelpText">ZIP Code</p>
+                            </div>
+                            <div class="cell large-2"></div>
+                        </div>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-2">
+                            </div>
+                            <div class="cell large-4">
+                                <label>Phone Number:
+                                    <input type="text" id="phonenumber" placeholder="123-456-7890" aria-describedby="exampleHelpText" required>
+                                    <span class="form-error">
+                                        Please enter phone number, it's required.
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="cell large-6"></div>
+                        </div>
+                        
+                        <div class="grid-x grid-margin-x">
+                                <div class="cell large-2"></div>
+                                <div class="cell large-8" id="addedchildren"></div>
+                                <div class="cell large-2"></div>
+                        </div>
+                        <div class="grid-x grid-margin-x">
+                                <div class="cell large-2"></div>
+                                <div class="cell large-8" id="userchild"></div>
+                                <div class="cell large-2"></div>
+                        </div>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-2"></div>
+                            <div class="cell large-2">
+                                <button type="button" class="primary button" id="addchild">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>Add a Child
+                                </button>
+                            </div>
+                            <div class="cell large-8">
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="grid-x grid-margin-x">
+                            <div class="cell large-5"></div>
+                            <div class="cell large-2">
+                                <button class="button" id="register">Register</button>
+                            </div>
+                            <div class="cell large-5"></div>
+                        </div>
+
+                    </div>
+                </form>
+
+
+
+                <!-- upper footer for additional text or link elsewhere -->
+                <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+                <div class="topFooter style-header">
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                            <div class="large-12 cell">
+                                <div class="text-center">
+                                    <!-- <h3>Ready to register for class?</h3> -->
+                                    <!-- links for social media -->
+                                    <!-- <a class="register-link" href="contact.html">Click here for more information and registration!</a> -->
+                                    <div class="link-pic">
+                                        <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                                            <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+                                        </a>
+                                    </div>
+                                    <div class="link-pic">
+                                        <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                                            <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+                                        </a>
+                                    </div>
+                                    <div class="link-pic">
+                                        <a target="_blank" href="https://www.usaswimming.org/">
+                                            <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- bottom footer with image -->
+                <footer>
+                    <div class="wrap row small-up-1 medium-up-3">
+                        <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+                            &copy; 2018 JSJ Enterprises
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+    <!-- end bottom footer -->
+
+    <script src="./assets/js/vendor/jquery.js"></script>
+    <script src="./assets/js/vendor/what-input.js"></script>
+    <script src="./assets/js/vendor/foundation.js"></script>
+    <script src="./assets/js/regUser.js"></script>
+
+
+
+
+
+</body>
+
+</html>

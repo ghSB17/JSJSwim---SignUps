@@ -22,23 +22,24 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/swimlevels.html"));
   });
 
+  app.get("/register", function(req, res) {
+    res.sendFile(path.join(__dirname,"../public/register.html"));
+  })
+
   app.get("/learning", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/learning.html"));
   });
 
-  app.get("/contact", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/contact.html"));
-  });
+  // app.get("/contact", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/contact.html"));
+  // });
 
-  app.get("/signup", function(req, res) {
-    res.sendFile(path.join(__dirname,"../public/signUp.html"));
-  })
   app.get("/faq", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/faq.html"));
   });
 
   app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/admin.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   

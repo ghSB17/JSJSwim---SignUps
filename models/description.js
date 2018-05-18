@@ -1,31 +1,31 @@
 //---------------class description---------------------//
 module.exports = function (sequelize, DataTypes) {
-    var Class_description = sequelize.define('Class_description', {
+    var Class_description = sequelize.define('Class_description', 
+    {
         class_name: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
         },
         age_min: {
-            type: DataTypes.DECIMAL(2, 1),
+            type: DataTypes.DECIMAL,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
+            // validate: {
+            //     len: [4,1]
+            // }
         },
         age_max: {
-            type: DataTypes.DECIMAL(2, 1),
+            type: DataTypes.DECIMAL,
             allowNull: false,
-            validate: {
-                len: [1]
-            }
+            // validate: {
+            //     len: [4,1]
+            // }
         },
         length: {
-            type: DataTypes.STRING,
+            type: DataTypes.DECIMAL,
             allowNull: false,
-            len: [1]
+            // validate: {
+            //     len: [4,1]
+            // }
         }
     });
 
