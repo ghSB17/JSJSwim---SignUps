@@ -1,3 +1,16 @@
 <div class="jumbotron">
-    {{msg}}
+<h5>
+{{#each users}}
+  <li> <h2> Registered User Name:
+    {{ firstName}}  {{lastName}}</li></h2>
+   <ul>
+    {{#each Users}}
+    <h4>
+       <li> Full Name: {{fullName}} <br>
+            Type: {{userType}}
+        </li> </h4> 
+    {{/each}}
+    </ul>
+{{/each}}
+</ul>
 </div>

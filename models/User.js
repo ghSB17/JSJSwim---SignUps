@@ -7,19 +7,9 @@ module.exports = function (sequelize, DataTypes) {
             autoIncrement: true,
             primaryKey: true
         },
-        firstName: {
+        fullName: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isAlpha: true
-            }
-        },
-        lastName: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isAlpha: true
-            }
+            allowNull: false
         },
         userType: {
             type: DataTypes.ENUM,

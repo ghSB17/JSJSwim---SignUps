@@ -1,13 +1,13 @@
 //this page works.  
 
 var path = require("path");
+var isAuthenticated=require('../config/middleware/isAuthenticated');
 
 
 module.exports = function(app) {
 
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
-    console.log('i clicked on home')
   });
 
   app.get("/about", function(req, res) {
@@ -39,8 +39,17 @@ module.exports = function(app) {
   });
 
   app.get("/login", function(req, res) {
+    if(req.user) {
+      return res.redirect("/locations");
+    }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
+  app.get("/logout", function(req,res){
+    console.log(req.user);
+    req.logout();
+    console.log("Logged Out!!");
+    res.redirect("/");
+  })
   
 };

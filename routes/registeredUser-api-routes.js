@@ -1,9 +1,17 @@
-var passport=require("../config/passport");
+var passport = require("../config/passport");
+var emailToParent = require("./emaildetails");
 
 module.exports = function (app, db) {
 
 
     app.post("/api/signin", passport.authenticate("local"), function (req, res) {
+        
+        if (!req.user) {
+            console.log("=====error======");
+            console.log("error");
+            console.log("=====error======");
+            res.json("error`");
+        }
         console.log(req.user);
         res.json(req.user);
     })
@@ -12,7 +20,8 @@ module.exports = function (app, db) {
         db.RegisteredUser.findAll({
             include: [db.User]
         }).then(function (RUserData) {
-            res.json(RUserData);
+            // res.json(RUserData);
+            res.render('email', {users: RUserData});
         })
 
     })
@@ -28,16 +37,36 @@ module.exports = function (app, db) {
             address2: req.body.address2,
             city: req.body.city,
             state: req.body.state,
-            zipCode: req.body.zipCode
+            zipCode: req.body.zipCode,
+            phoneNumber: req.body.phoneNumber
         }).then(function (regUserData) {
             // res.json(regUserData);
             db.User.create({
-                firstName: regUserData.firstName,
-                lastName: regUserData.lastName,
+                fullName: regUserData.firstName + " " + regUserData.lastName,
                 userType: 'Parent',
                 RegisteredUserRuId: regUserData.ruId
             }).then(function (resUser) {
-                res.json(resUser);
+                console.log("Here!!-----");
+                var childUsers = [];
+                for (i = 0; i < req.body.children.length; i++) {
+                    var cUser = {
+                        fullName: req.body.children[i],
+                        userType: 'Child',
+                        RegisteredUserRuId: regUserData.ruId
+                    }
+                    console.log(childUsers);
+                    console.log('--------------');
+                    childUsers.push(cUser);
+                }
+                db.User.bulkCreate(childUsers).then(function (result) {
+                    console.log("===========");
+                    console.log(result)
+                    console.log("===========");
+                    console.log("did it happen!!");
+                    emailToParent(regUserData, childUsers);
+                    res.json("/login");
+                });
+
             })
 
         })

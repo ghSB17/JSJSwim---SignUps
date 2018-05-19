@@ -2,23 +2,29 @@ $(document).foundation();
 $(document).ready(function () {
 
     $("#login").on("click", function () {
+        
         var email = $("#email").val().trim();
         var pwd = $("#pwd").val().trim();
         $.post("/api/signin", {
             email: email,
-            password: password
+            password: pwd
         }).then(function (data) {
+            $("#errorData").html('Welcome '+data.firstName+" "+data.lastName);
+            console.log("HERE++++++++");
+            localStorage.firstName=data.firstName;
+            localStorage.LastName=data.lastName;
+            localStorage.ruId=data.ruId;
             console.log(data);
-            alert(data);
-            window.location.replace('/locations');
+            // window.location.replace('/locations');
         }).catch(function (err) {
             console.log(err);
-
+            $("#errorData").html("Invalid Input!! </br>The login and password do not match");
         })
-        alert("you clicked login");
+        
     })
 
     $("#register").on("click", function () {
+        
         window.location.replace("/register")
         
     })

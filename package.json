@@ -22,6 +22,7 @@
     "body-parser": "*",
     "express": "*",
     "express-handlebars": "*",
+    "express-session": "^1.15.6",
     "fs": "*",
     "handlebars": "^4.0.11",
     "mysql": "^2.11.1",
