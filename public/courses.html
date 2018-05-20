@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSJ Swim School</title>
+
+  <!-- Connections to Foundation CSS files and custom css file -->
+  <link rel="stylesheet" href="./assets/css/foundation.css">
+  <link rel="stylesheet" href="./assets/css/foundation.min.css">
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+  <style>
+    /* .class-list {
+
+    } */
+
+    .course-list-item {
+        margin-bottom: 10px;
+    }
+
+    .course-list-item .course-name {
+        font-size: 24px;
+    }
+
+    .course-list-item .course-age {
+        font-size: 12px;
+    }
+
+    .course-list-item .course-length {
+        font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- top menu bar -->
+
+  <nav data-sticky-container>
+    <div data-sticky data-options="marginTop:0;">
+
+      <!-- Mobile menu  -->
+      <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle="main-nav"></button>
+        <img class="logo" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+      </div>
+
+      <!-- Top bar Left (Company Logo) -->
+      <div class="grid-container">
+        <div class="top-bar" id="main-nav">
+
+          <div class="top-bar-left">
+            <img class="logo hide-logo-mobile" src="./assets/images/Logo-noback.png" alt="JSJ Swim School">
+          </div>
+
+          <!-- Navigation Menu -->
+          <ul class="vertical large-horizontal dropdown menu" data-responsive-menu="accordion large-dropdown">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <li>
+                <a href="/about">About Us</a>
+              </li>
+              <li>
+                <a href="/locations">Locations</a>
+              </li>
+              <li>
+                <a href="/swimlevels">Swim Levels</a>
+                <ul class="menu vertical nested">
+                  <li>
+                    <a href="./swimlevels#parentChild">Parent/Child</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#preSchool">Pre-School</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#schoolAge">School Age</a>
+                  </li>
+                  <li>
+                    <a href="./swimlevels#competitiveSwim">Competitive</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="/learning">Extended Learning</a>
+              </li>
+              <a href="./login">Login</a>
+            </li>
+            <li>
+              <li>
+                <a href="./faq">FAQ</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Form -->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="style-header text-center">
+          <h1>Courses</h1>
+        </div>
+        <div class="text-box-sizing">
+          <h2 class="text-center">Signup for a Class Today!</h2>
+        </div>
+        <br>
+      </div>
+    </div>
+
+    <div id="courses-list">
+    </div>
+
+  </div>
+
+
+  <!-- upper footer for additional text or link elsewhere -->
+  <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+  <div class="topFooter style-header">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="text-center">
+            <h3>Ready to register for class?</h3>
+
+            <!-- links for social media -->
+            <a class="register-link" href="contact">Click here for more information and registration!</a>
+            <div class="link-pic">
+              <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+              </a>
+            </div>
+            <div class="link-pic">
+              <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+              </a>
+            </div>
+            <div class="link-pic">
+              <a target="_blank" href="https://www.usaswimming.org/">
+                <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end upper footer -->
+
+  <!-- bottom footer with image -->
+  <footer>
+    <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+      &copy; 2018 JSJ Enterprises
+    </div>
+  </footer>
+  <!-- end bottom footer -->
+  </div>
+
+  <!-- scripts for JS -->
+  <script src="./assets/js/vendor/jquery.js"></script>
+  <script src="./assets/js/vendor/what-input.js"></script>
+  <script src="./assets/js/vendor/foundation.js"></script>
+  <!-- for backend -->
+  <script src="./assets/js/description.js"></script>
+  <script src="./assets/js/instance.js"></script>
+  <!-- end here -->
+  <script src="./assets/js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+
+  <script type="text/javascript">
+    function humanize_age(age){
+        var years = Math.floor(age);
+        var months = Math.ceil((age * 12) % 12);
+        if (years === 0) {
+            return months + " months";
+        } else {
+            if (months === 0) {
+                return years + " years";
+            } else {
+                return years + " years and " + months + " months";
+            }
+        }
+        return 
+    }
+
+
+    $.get("api/description", function (data) {
+        for (i = 0; i <data.length; i++) {
+            // create a new row
+            var new_class = $("<div class='course-list-item'>");
+            // add class name
+            new_class.append("<div class='course-name'>" + data[i].class_name + "</div>");
+            // add class age
+            new_class.append("<div class='course-age'>" + humanize_age(data[i].age_min) + " - " + humanize_age(data[i].age_max) + "</div>");
+            new_class.append("<div class='course-length'>" + data[i].length + " minutes</div>");
+            // add buttons/actions
+            new_class.append("<div class='course-actions'><a class='signup-btn' data-courseid='"+data[i].id+"' href='"+"/api/coursesInstances/"+data[i].id+"'>Signup</a></div>");
+            // append the row to the table tbody
+            $("#courses-list").append(new_class);
+
+
+        };
+    });
+  </script>
+
+
+<script src="./assets/js/courses.js"></script>
+</body>
+
+</html>

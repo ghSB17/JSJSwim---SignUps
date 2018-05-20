@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./assets/css/foundation.css">
   <link rel="stylesheet" href="./assets/css/foundation.min.css">
   <link rel="stylesheet" href="./assets/css/app.css">
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -65,13 +66,12 @@
               <li>
                 <a href="/learning">Extended Learning</a>
               </li>
-              <li class="active">
-                <a href="./login">Login</a>
-              </li>
+              <a href="./login">Login</a>
+            </li>
+            <li>
               <li>
-                <li>
-                  <a href="./faq">FAQ</a>
-                </li>
+                <a href="./faq">FAQ</a>
+              </li>
           </ul>
         </div>
       </div>
@@ -83,13 +83,10 @@
     <div class="grid-x grid-padding-x">
       <div class="large-12 cell">
         <div class="style-header text-center">
-          <h1>Administrator Login</h1>
+          <h1>Administrator</h1>
         </div>
         <div class="text-box-sizing">
-          <p class="text-center">
-            create class descriptions and class instances
-            <br>
-          </p>
+          <h2 class="text-center">Create class descriptions and class instances</h2>
         </div>
         <br>
       </div>
@@ -101,7 +98,7 @@
         <div class="grid-x grid-padding-x">
           <div class="large-12 cell">
             <div>
-              <h3>Class Description Input</h3>
+              <h3>Class Description</h3>
             </div>
             <div class="grid-x grid-padding-x">
               <div class="large-4 medium-4 cell">
@@ -127,7 +124,7 @@
       </div>
     </form>
 
-    <table id="description-table">      
+    <table id="description-table">
     </table>
     <!-- Error message -->
     <!-- <div class="row">
@@ -138,11 +135,12 @@
                 <i class="fi-alert"></i>There are some errors in your form.</p>
             </div>
           </form> -->
-    <!-- form two --> -->
+    <!-- form two -->
+    <hr>
     <form action="/api/instance" method="post" id="instance-form">
       <div class="grid-x grid-padding-x">
         <div>
-          <h3>Class Instance information</h3>
+          <h3>Class Instance</h3>
         </div>
         <div class="grid-x grid-padding-x">
           <div class="large-4 medium-4 cell">
@@ -150,8 +148,12 @@
             <input type="text" name="week_day" id="weekDay" placeholder="Day of the week" />
           </div>
           <div class="large-4 medium-4 cell">
+            <label>Time</label>
+            <input type="text" name=time id="time" placeholder="00:00 AM/PM" />
+          </div>
+          <div class="large-4 medium-4 cell">
             <label>Start date</label>
-            <input type="text" name="start_date" id="startDate" placeholder="00/00/000" />
+            <input type="text" name="start_date" id="startDate" placeholder="00/00/0000" />
           </div>
           <div class="large-4 medium-4 cell">
             <label>end date</label>
@@ -159,145 +161,156 @@
           </div>
           <div class="large-4 medium-4 cell">
             <label>seats total</label>
-            <input type="text" name="seats_total" id="seatsTotal" placeholder="in numbers only" />
+            <input type="text" name="seats_total" id="seatsTotal" placeholder="In Numbers" />
           </div>
           <div class="large-4 medium-4 cell">
             <label>seats filled</label>
-            <input type="text" id="seatsFilled" placeholder="in numbers only" />
+            <input type="text" name="seats_filled" id="seatsFilled" placeholder="In numbers only" />
           </div>
         </div>
-        <div class="large-4 medium-4 cell">
-        <div> 
-        <a class="button" id="instanceSubmit">Submit</a>
-      </div>
-    </div>
+
         <!-- <!Subject with dropdown list of choices -->
-     <div class="grid-x grid-padding-x">
-      <div class="large-12 medium-4 cell">
-        <label>Select Class</label>
-        <select id="description-selection" name="">
-          <option value="parent">Parent/Child</option>
-          <option value="preschool">Leap Frog</option>
-          <option value="school">Pre-school Parrotfish</option>
-          <option value="competitive">Clownfish</option>
-          <option value="private">Tortoises</option>
-          <option value="other">goldfish</option>
-          <option value="other">Dolphins</option>
-          <option value="other">Pre-comp Sharks</option>
-          <option value="other">Masters Swim</option>
-        </select>
+        <div class="grid-x grid-padding-x">
+          <div class="large-12 medium-4 cell">
+            <label>Select Class</label>
+            <!-- Thursday -->
+
+            <!-- this drop down has to be created. value the ID. for i can grab the class description id as text -->
+            <!-- the name of the request paramater is what needs to be called in the API -->
+            <select id="description-selection" name="ClassDescriptionId">
+
+            </select>
+          </div>
+          <div>
+            <a class="button" id="instanceSubmit">Submit</a>
+          </div>
+        </div>
       </div>
-      <a href="#" class="button">Submit</a>
-    </div>
-    </div>
     </form>
 
-    </div>
+    <table id="instance-table" class="striped">
+      <thead>
+        <tr>
+          <th>Course Name</th>
+          <th>Day</th>
+          <th>Start Time</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th style="text-align: center;">Seats</th>
+          <th style="text-align: center;">Seats Filled</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
   </div>
-  </div>
 
 
-  <upper footer for additional text or link elsewhere -->
-    <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
-    <div class="topFooter style-header">
-      <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-          <div class="large-12 cell">
-            <div class="text-center">
-              <h3>Ready to register for class?</h3>
+  <!-- upper footer for additional text or link elsewhere -->
+  <!-- FIX THE MARGIN TO ZERO SO DARK BLUE IS IN LINE WITH THE REST -->
+  <div class="topFooter style-header">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+          <div class="text-center">
+            <h3>Ready to register for class?</h3>
 
-              <!-- links for social media -->
-              <a class="register-link" href="contact">Click here for more information and registration!</a>
-              <div class="link-pic">
-                <a target="_blank" href="https://www.facebook.com/USAswimming/">
-                  <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
-                </a>
-              </div>
-              <div class="link-pic">
-                <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
-                  <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
-                </a>
-              </div>
-              <div class="link-pic">
-                <a target="_blank" href="https://www.usaswimming.org/">
-                  <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
-                </a>
-              </div>
+            <!-- links for social media -->
+            <a class="register-link" href="contact">Click here for more information and registration!</a>
+            <div class="link-pic">
+              <a target="_blank" href="https://www.facebook.com/USAswimming/">
+                <img border="0" alt="facebook" src="assets/images/facebook-logo.png" width="50px">
+              </a>
+            </div>
+            <div class="link-pic">
+              <a target="_blank" href="https://www.instagram.com/explore/locations/141750626068/usa-swimming/">
+                <img border="0" alt="instagram" src="assets/images/instagram.png" width="50px">
+              </a>
+            </div>
+            <div class="link-pic">
+              <a target="_blank" href="https://www.usaswimming.org/">
+                <img border="0" alt="USA Swimming" src="assets/images/USA-swimming.png" width="50px">
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- end upper footer -->
+  </div>
+  <!-- end upper footer -->
 
-    <!-- bottom footer with image -->
-    <footer>
-      <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
-        &copy; 2018 JSJ Enterprises
-      </div>
-    </footer>
-    <!-- end bottom footer -->
+  <!-- bottom footer with image -->
+  <footer>
+    <div class="fixed-bottom bg-info text-white text-center p-3 footer-image">
+      &copy; 2018 JSJ Enterprises
     </div>
+  </footer>
+  <!-- end bottom footer -->
+  </div>
 
-    <!-- scripts for JS -->
-    <script src="./assets/js/vendor/jquery.js"></script>
-    <script src="./assets/js/vendor/what-input.js"></script>
-    <script src="./assets/js/vendor/foundation.js"></script>
-    <!-- for backend -->
-    <script src="./assets/js/description.js"></script>
-    <script src="./assets/js/instance.js"></script>
-    <!-- end here -->
-    <script src="./assets/js/app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- scripts for JS -->
+  <script src="./assets/js/vendor/jquery.js"></script>
+  <script src="./assets/js/vendor/what-input.js"></script>
+  <script src="./assets/js/vendor/foundation.js"></script>
+  <!-- for backend -->
+  <script src="./assets/js/description.js"></script>
+  <script src="./assets/js/instance.js"></script>
+  <!-- end here -->
+  <script src="./assets/js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
 
 
-    <script type="text/javascript">
-      $(".submit").on("click", function (event) {
-        event.preventDefault();
+  <script type="text/javascript">
+    // Datatables https://datatables.net/
+    // $(document).ready( function () {
+    //   $('#instance-table').DataTable();
+    // });
 
-        // Here we grab the form elements
-        var newdescription = {
-          nameInput: $("#className").val().trim(),
-          ageMinInput: $("#ageMin").val().trim(),
-          ageMaxInput: $("#ageMax").val().trim(),
-          legnthInput: $("#length").val().trim(),
-        };
+    $(".submit").on("click", function (event) {
+      event.preventDefault();
 
-        console.log(newdescription);
+      // Here we grab the form elements
+      var newdescription = {
+        nameInput: $("#className").val().trim(),
+        ageMinInput: $("#ageMin").val().trim(),
+        ageMaxInput: $("#ageMax").val().trim(),
+        legnthInput: $("#length").val().trim(),
+      };
 
-        // This line is the magic. It"s very similar to the standard ajax function we used.
-        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-        // depending on if a tables is available or not.
+      console.log(newdescription);
 
-        $.post("/api/descrip", newdescription,
-          function (data) {
+      // This line is the magic. It"s very similar to the standard ajax function we used.
+      // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+      // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+      // depending on if a tables is available or not.
 
-            // If a table is available... tell user they are booked.
-            if (data) {
-              alert("Yay! You are officially booked!");
-            }
+      $.post("/api/descrip", newdescription,
+        function (data) {
 
-            // If a table is available... tell user they on the waiting list.
-            else {
-              alert("Sorry you are on the wait list");
-            }
+          // If a table is available... tell user they are booked.
+          if (data) {
+            alert("Yay! You are officially booked!");
+          }
 
-            // Clear the form when submitting
-            $("#className").val("");
-            $("#ageMin").val("");
-            $("#ageMax").val("");
-            $("#length").val("");
+          // If a table is available... tell user they on the waiting list.
+          else {
+            alert("Sorry you are on the wait list");
+          }
 
-          });
+          // Clear the form when submitting
+          $("#className").val("");
+          $("#ageMin").val("");
+          $("#ageMax").val("");
+          $("#length").val("");
 
-      });
-    </script>
+        });
+
+    });
+  </script>
 
 
 

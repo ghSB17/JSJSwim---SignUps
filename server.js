@@ -7,6 +7,7 @@ var exphbs = require('express-handlebars');
 var uuid = require("uuid");
 var mysql = require("mysql");
 var session = require('express-session');
+var path=require('path');
 
 //requiring passport as we configured it
 var passport=require("./config/passport");
@@ -28,6 +29,10 @@ app.engine("handlebars", exphbs({
 }));
 app.set("view engine", "handlebars");
 
+
+// app.set("views", __dirname+"\\public\\views\\layouts");
+exphbs.ExpressHandlebars.prototype.layoutsDir =path.join(__dirname,"./public/views");
+
 //we need session to keep track of user's login status
 app.use(session({secret:"keyboard cat", resave:true,saveUninitialized:true}));
 app.use(passport.initialize());
@@ -38,6 +43,8 @@ app.use(passport.session());
 require("./routes/html-routes.js")(app);
 require("./routes/descr-api-routes.js")(app);
 require("./routes/inst-api-routes.js")(app);
+// nothing under login yet
+// require("./routes/login-api-routes.js")(app);
 
 
 //Routes to send email

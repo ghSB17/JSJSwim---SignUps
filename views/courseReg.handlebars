@@ -1,0 +1,37 @@
+<div>
+    {{#each courses}}
+    <div class="callout">
+        <h6>
+            <div class="grid-x grid-margin-x">
+                <div class="cell medium-3 large-3">{{class_name}}</div>
+                <div class="cell medium-3 large-2">Start Date:{{start_date}}</div>
+                <div class="cell medium-3 large-2">End Date:{{end_date}}</div>
+            </div>
+            <br>
+            <div class="grid-x grid-margin-x">
+                <div class="cell medium-3 large-3">Day of the week:{{week_day}}</div>
+                <div class="cell medium-3 large-2">Time:{{time}}</div>
+                <div class="cell medium-3 large-3">Class is {{length}} mins long</div>
+            </div>
+            <br>
+            <div class="grid-x grid-margin-x">
+                <div class="cell medium-3 large-2">Total Seats:{{seats_total}}</div>
+                <div class="cell medium-3 large-2">Remaining Seats:{{remaining}}</div>
+            </div>
+            <br>
+            <div class="grid-x grid-margin-x">
+                <div class="cell large-8" id='div{{id}}'>
+                    Select the members you wish to enroll: {{#each users}}
+                    <input data-userId='{{userId}}' type="checkbox">
+                    <label for="checkbox1">{{fullName}}</label>
+                    {{/each}}
+                </div>
+                <div class="cell large-3">
+                    <a href="#" class="button regCourse" data-instanceId='{{id}}' data-descriptionId='{{ClassDescriptionId}}' data-className='{{class_name}}' data-familyId='{{familyId}}'>Register</a>
+                </div>
+            </div>
+
+            </h>
+    </div>
+    {{/each}}
+</div>

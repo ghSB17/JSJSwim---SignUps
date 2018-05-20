@@ -1,4 +1,4 @@
-//---------------class description---------------------//
+//class description info
 module.exports = function (sequelize, DataTypes) {
     var Class_description = sequelize.define('Class_description', 
     {

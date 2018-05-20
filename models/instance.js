@@ -6,11 +6,14 @@ module.exports = function (sequelize, DataTypes) {
       week_day: {
         type: DataTypes.STRING
       },
+      time: {
+        type: DataTypes.STRING
+      },
       start_date: {
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
       },
       end_date: {
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
       },
       // seats_available: {
       //   type: DataTypes.INTEGER

@@ -27,6 +27,11 @@ screen and (min-width: 40em) {
   
 /* Adjust font size for main nav */
 }
+
+.brdr {
+  /* padding: 2%; */
+  border: 1px solid black;
+}
 #main-nav {
   font-size: 14px;
 }

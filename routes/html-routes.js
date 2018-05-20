@@ -40,10 +40,16 @@ module.exports = function(app) {
 
   app.get("/login", function(req, res) {
     if(req.user) {
-      return res.redirect("/locations");
+      return res.redirect("/courses");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
+
   });
+
+  app.get("/admin", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/admin.html"));
+  });
+
 
   app.get("/logout", function(req,res){
     console.log(req.user);
@@ -51,5 +57,12 @@ module.exports = function(app) {
     console.log("Logged Out!!");
     res.redirect("/");
   })
+
+  app.get("/courses", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/courses.html"));
+  });
+
+
+
   
 };
