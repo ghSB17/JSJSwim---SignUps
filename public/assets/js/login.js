@@ -10,14 +10,10 @@ $(document).ready(function () {
             password: pwd
         }).then(function (data) {
             $("#errorData").html('Welcome '+data.firstName+" "+data.lastName);
-            // console.log("HERE++++++++");
-            // localStorage.firstName=data.firstName;
-            // localStorage.LastName=data.lastName;
-            // localStorage.ruId=data.ruId;
-            console.log(data);
+            // console.log(data);
             window.location.replace('/courses');
         }).catch(function (err) {
-            console.log(err);
+            // console.log(err);
             $("#errorData").html("Invalid Input!! </br>The login and password do not match");
         })
         

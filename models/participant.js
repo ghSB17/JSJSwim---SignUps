@@ -1,8 +1,25 @@
 //---------------class participant---------------------//
 module.exports = function (sequelize, DataTypes) {
     var Class_participant =sequelize.define('Class_participant', {
-      registration_date: {
-        type: DataTypes.STRING
+      ClassDescriptionId:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+      },
+      ClassInstanceId:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+      },
+      FamilyId:{
+        type:DataTypes.STRING,
+        allowNull:false
+      },
+      UserId:{
+        type:DataTypes.INTEGER,
+        allowNull:false
+      },
+      FullName:{
+        type:DataTypes.STRING,
+        allowNull:false
       }
     });
     return Class_participant;

@@ -53,6 +53,8 @@ require("./routes/email-api-routes.js")(app,db);
 require("./routes/registeredUser-api-routes")(app,db);
 //API Routes to User(Parent/Child) 
 require("./routes/user-api-routes")(app,db);
+//Routes to create class_participant
+require("./routes/courses-api-routes")(app,db);
 
 // Syncing our sequelize models and then starting our Express app
 db.sequelize.sync({}).then(function() {

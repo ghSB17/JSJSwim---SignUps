@@ -20,10 +20,10 @@
             </div>
             <br>
             <div class="grid-x grid-margin-x">
-                <div class="cell large-8" id='div{{id}}'>
+                <div class="cell large-8 chkdiv" id='div{{id}}'>
                     Select the members you wish to enroll: {{#each users}}
-                    <input data-userId='{{userId}}' type="checkbox">
-                    <label for="checkbox1">{{fullName}}</label>
+                    <label><input data-userId='{{userId}}' type="checkbox" value='{{fullName}}' name='child'>
+                    {{fullName}}</label>
                     {{/each}}
                 </div>
                 <div class="cell large-3">
