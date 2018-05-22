@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#instanceSubmit").click(function() {
         console.log($('#instance-form').serialize())
         $.post('/api/instance', $('#instance-form').serialize(), function(data) {
-            console.log(data);
+            // console.log(data);
             createInstanceRow(data);
         },
         'json'
@@ -48,7 +48,7 @@ $(document).ready(function () {
         for (var i = 0; i < data.length; i++) {
         rowsToAdd.push(createDescripRow(data[i]));
         }
-        console.log(rowsToAdd);
+        // console.log(rowsToAdd);
      };
 
        

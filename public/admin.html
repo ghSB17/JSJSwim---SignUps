@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="./assets/css/foundation.css">
   <link rel="stylesheet" href="./assets/css/foundation.min.css">
   <link rel="stylesheet" href="./assets/css/app.css">
-  <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -66,9 +65,15 @@
               <li>
                 <a href="/learning">Extended Learning</a>
               </li>
-              <a href="./login">Login</a>
-            </li>
-            <li>
+              <li id="alogin">
+                <a href="/login">Login</a>
+              </li>
+              <li id="alogout">
+                <a href="/logout">Logout</a>
+              </li>
+              <li id="aregister">
+                <a href="/login">Register</a>
+              </li>
               <li>
                 <a href="./faq">FAQ</a>
               </li>
@@ -124,18 +129,19 @@
       </div>
     </form>
 
-    <table id="description-table">
+   
+    <table id="description-table" class="striped">
+      <thead>
+        <tr>
+          <th>Class Name</th>
+          <th>Age Min</th>
+          <th>Age Max</th>
+          <th>Length in Minutes</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
     </table>
-    <!-- Error message -->
-    <!-- <div class="row">
-        <div class="grid-container">
-          <form data-abide novalidate>
-            <div data-abide-error class="alert callout" style="display: none;">
-              <p>
-                <i class="fi-alert"></i>There are some errors in your form.</p>
-            </div>
-          </form> -->
-    <!-- form two -->
+
     <hr>
     <form action="/api/instance" method="post" id="instance-form">
       <div class="grid-x grid-padding-x">
@@ -259,8 +265,6 @@
   <script src="./assets/js/app.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
 
 

@@ -66,10 +66,18 @@
               <li>
                 <a href="/learning">Extended Learning</a>
               </li>
-              <li >
+              {{!-- <li >
                 <a href="/register">Contact Us</a>
-              </li>
-              <li>
+              </li> --}}
+              <li id="alogin">
+                  <a href="/login">Login</a>
+                </li>
+                <li id="alogout">
+                  <a href="/logout">Logout</a>
+                </li>
+                <li id="aregister">
+                  <a href="/login">Register</a>
+                </li>
                 <li>
                   <a href="/faq">FAQ</a>
                 </li>
@@ -86,7 +94,7 @@
     <div class="grid-x grid-padding-x">
       <div class="large-12 cell">
         <div class="style-header text-center">
-          <h1>Course Registeration</h1>
+          <h1>Course Registration</h1>
         </div>
         <div class="text-box-sizing">
           <h3 class="text-center"></h3>
@@ -99,7 +107,9 @@
             
           </div>
         </div>
+        <div id="content">
         {{{body}}}
+        </div>
 
 
 

@@ -16,6 +16,14 @@ module.exports = function (app, db) {
         res.json(req.user);
     })
 
+    app.get("/api/user", function(req,res){
+        console.log("In REGISTERED USER API ROUTES");
+        if( req.user )
+            return res.json(true);
+        else 
+            return res.json(false);
+    })
+
     app.get("/api/registeredUser", function (req, res) {
         db.RegisteredUser.findAll({
             include: [db.User]
@@ -51,9 +59,6 @@ module.exports = function (app, db) {
                 console.log("Here!!-----");
 
                 var childUsers = [];
-                console.log("************************************************************************************")
-                console.log(typeof (req.body.children));
-                console.log("************************************************************************************")
                 if (req.body.children !== "none") {
                     for (i = 0; i < req.body.children.length; i++) {
                         var cUser = {
@@ -70,11 +75,11 @@ module.exports = function (app, db) {
                         console.log(result)
                         console.log("===========");
                         console.log("did it happen!!");
-                        emailToParent(regUserData, childUsers);
+                        emailToParent(db, regUserData, req.body.email, childUsers);
                         res.json("/login");
                     });
                 } else {
-                    emailToParent(regUserData, "none");
+                    emailToParent(db, regUserData, req.body.email, "none");
                     res.json("/login");
                 }
 

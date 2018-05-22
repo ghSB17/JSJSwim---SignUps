@@ -14,14 +14,14 @@ module.exports = function (sequelize, DataTypes) {
             // }
         },
         age_max: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.INTEGER,
             allowNull: false,
             // validate: {
             //     len: [4,1]
             // }
         },
         length: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.INTEGER,
             allowNull: false,
             // validate: {
             //     len: [4,1]
