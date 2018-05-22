@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     $(document).on('click', '.delbtn', function () {
         var idNum = $(this).data("id");
-        alert(idNum);
+        // alert(idNum);
         if (children.length !== 1) {
             children.splice(idNum, 1);
             childUsers.splice(idNum, 1);

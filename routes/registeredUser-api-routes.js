@@ -7,9 +7,6 @@ module.exports = function (app, db) {
     app.post("/api/signin", passport.authenticate("local"), function (req, res) {
 
         if (!req.user) {
-            console.log("=====error======");
-            console.log("error");
-            console.log("=====error======");
             res.json("error`");
         }
         console.log(req.user);
