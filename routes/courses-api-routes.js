@@ -35,7 +35,7 @@ module.exports = function (app, db) {
     console.log("In ClassParticipant API")
     db.Class_participant.bulkCreate(req.body.participantData).then(function (resData) {
 
-      var sqlStr = "UPDATE Class_instances SET seats_filled = seats_filled - " + req.body.participantData.length + "  WHERE id= " + req.body.participantData[0].ClassInstanceId + " AND ClassDescriptionId= "+req.body.participantData[0].ClassDescriptionId+";";
+      var sqlStr = "UPDATE Class_instances SET seats_filled = seats_filled + " + req.body.participantData.length + "  WHERE id= " + req.body.participantData[0].ClassInstanceId + " AND ClassDescriptionId= "+req.body.participantData[0].ClassDescriptionId+";";
       console.log(sqlStr);
       db.sequelize.query(sqlStr).then(function (result) {
 

@@ -69,9 +69,9 @@ $(document).ready(function () {
         } else if ( password1 !== password2 ) {
             errTxt = "</h3>Passwords Must Match</h3>";
             return true;
-        } else if (password1.match(patt1)) {
-            errTxt="<h3>Password can only be AlphaNumeric!</h3>";
-            return true;
+        // } else if (password1.match(patt1)) {
+        //     errTxt="<h3>Password can only be AlphaNumeric!</h3>";
+        //     return true;
         } else {
             return false;
         }

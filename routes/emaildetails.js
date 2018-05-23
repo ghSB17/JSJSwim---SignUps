@@ -44,10 +44,10 @@ module.exports = function (db, data, emailaddr, childData) {
         htmlText += " Here are details of Your Registration<br>";
         htmlText += "Created On: " + data.createdAt + "<br>";
         htmlText += "Address: <br>" + data.address1 + " " + data.address2 + data.city + ", " + data.state + " " + data.zipCode + "<br></h3>";
-        htmlText += "Children:<br>"
+        htmlText += "Members:<br>"
         if (childData !== "none") {
             for (i = 0; i < childData.length; i++) {
-                htmlText += " <h4>Child </h4><h3>" +i+": " + childData[i].fullName + "</h3><br>"
+                htmlText += " <h4>Member</h4>" +(i+1)+": " + childData[i].fullName + "</h3><br>"
             }
         }
        
