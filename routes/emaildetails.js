@@ -7,8 +7,8 @@ module.exports = function (db, data, emailaddr, childData) {
 
         service: 'gmail',
         auth: {
-            user:  'jsjswim@gmail.com',
-            pass:  'abcd123456$'
+            user: process.env.BRANCH_EMAIL || 'jsjswim@gmail.com',
+            pass: process.env.BRANCH_SECRET_CODE || 'abcd123456$'
         }
     });
 
@@ -43,11 +43,11 @@ module.exports = function (db, data, emailaddr, childData) {
         htmlText += "<br>You have Succesfully Registered!<br>";
         htmlText += " Here are details of Your Registration<br>";
         htmlText += "Created On: " + data.createdAt + "<br>";
-        htmlText += "Address: <br>" + data.address1 + " " + data.city + ", " + data.state + " " + data.zipCode + "<br></h3>";
+        htmlText += "Address: <br>" + data.address1 + " " + data.address2 + data.city + ", " + data.state + " " + data.zipCode + "<br></h3>";
         htmlText += "Children:<br>"
         if (childData !== "none") {
             for (i = 0; i < childData.length; i++) {
-                htmlText += " <h4>Child1: </h4><h3>" + childData[i].fullName + "</h3><br>"
+                htmlText += " <h4>Child </h4><h3>" +i+": " + childData[i].fullName + "</h3><br>"
             }
         }
        

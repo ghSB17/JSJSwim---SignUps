@@ -2,25 +2,43 @@ $(document).ready(function () {
 
     var childUsers = [];
     var children = [];
+    var email;
+    var password1;
+    var password2;
+    var fname;
+    var lname;
+    var address1;
+    var address2;
+    var city;
+    var state;
+    var zip;
+    var phonenumber;
+    var errTxt;
+    var patt1 = /[^a-zA-Z0-9]/g;
+
     $("#register").on("click", function (event) {
         event.preventDefault();
         // alert("what's working");
-        var email = $("#email").val().trim();
-        var password1 = $("#password1").val().trim();
-        var password2 = $("#password2").val().trim();
-        var fname = $("#fname").val().trim();
-        var lname = $("#lname").val().trim();
-        var address1 = $("#address1").val().trim();
-        var address2 = $("#address2").val().trim();
-        var city = $("#city").val().trim();
-        var state = $("#state").val().trim();
-        var zip = $("#zipcode").val().trim();
-        var phonenumber = $("#phonenumber").val().trim();
+        email = $("#email").val().trim();
+        password1 = $("#password1").val().trim();
+        password2 = $("#password2").val().trim();
+        fname = $("#fname").val().trim();
+        lname = $("#lname").val().trim();
+        address1 = $("#address1").val().trim();
+        address2 = $("#address2").val().trim();
+        city = $("#city").val().trim();
+        state = $("#state").val().trim();
+        zip = $("#zipcode").val().trim();
+        phonenumber = $("#phonenumber").val().trim();
 
         if (email === "" || password1 === "" || password2 == "" || fname == "" || lname == "" || address1 == "" || city == "" || state == "" || zip == "" || phonenumber == "") {
 
-            $("#errors").html("Some important input fields are left incomplete");
+            $("#errors").html("</h3>Some important input fields are left incomplete</h3>");
             $("#errors").css("display", "block");
+        } else if (passwordChk()) {
+            $("#errors").html(errTxt);
+            $("#errors").css("display", "block");
+
         } else {
             $.post("/api/registeredUser", {
                 firstName: fname,
@@ -33,7 +51,7 @@ $(document).ready(function () {
                 state: state,
                 zipCode: zip,
                 phoneNumber: phonenumber,
-                children: ( (children.length>0) ? children : "none")
+                children: ((children.length > 0) ? children : "none")
             }).then(function (data) {
                 // console.log(data);
                 window.location.replace(data);
@@ -43,6 +61,21 @@ $(document).ready(function () {
 
         }
     });
+
+    function passwordChk() {
+        if( email.search("@")===-1){
+            errTxt= "<h3>Please Enter email in Correct Format"
+            return true;
+        } else if ( password1 !== password2 ) {
+            errTxt = "</h3>Passwords Must Match</h3>";
+            return true;
+        } else if (password1.match(patt1)) {
+            errTxt="<h3>Password can only be AlphaNumeric!</h3>";
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
     $("#addchild").on("click", function () {

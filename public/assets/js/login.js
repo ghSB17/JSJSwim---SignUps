@@ -9,12 +9,13 @@ $(document).ready(function () {
             email: email,
             password: pwd
         }).then(function (data) {
-            $("#errorData").html('Welcome '+data.firstName+" "+data.lastName);
+            $("#errorData").css("background-color","lightblue");
+            $("#errorData").html('<h2>Welcome '+data.firstName+" "+data.lastName+"!</h2>");
             // console.log(data);
             window.location.replace('/courses');
         }).catch(function (err) {
             // console.log(err);
-            $("#errorData").html("Invalid Input!! </br>The login and password do not match");
+            $("#errorData").html("<h3>Invalid Input!! </br>Enter Correct Information!!</h3>");
         })
         
     })
