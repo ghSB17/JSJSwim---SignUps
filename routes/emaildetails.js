@@ -7,8 +7,8 @@ module.exports = function (db, data, emailaddr, childData) {
 
         service: 'gmail',
         auth: {
-            user: process.env.BRANCH_EMAIL || 'jsjswim@gmail.com',
-            pass: process.env.BRANCH_SECRET_CODE || 'abcd123456$'
+            user:  'jsjswim@gmail.com',
+            pass:  'abcd123456$'
         }
     });
 

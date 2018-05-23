@@ -28,7 +28,7 @@ $(document).ready(function () {
                     UserId: userId,
                     FullName: fName
                 });
-                sqlString += "SELECT * FROM class_participants WHERE ClassDescriptionId = " + ClassDescriptionId + " and ClassInstanceId= " + classInstanceId + " and FamilyId='" + familyId + "' and UserId=" + userId + " UNION ";
+                sqlString += "SELECT * FROM Class_participants WHERE ClassDescriptionId = " + ClassDescriptionId + " and ClassInstanceId= " + classInstanceId + " and FamilyId='" + familyId + "' and UserId=" + userId + " UNION ";
             }
         });
         console.log(participantObj);

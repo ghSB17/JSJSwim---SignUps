@@ -35,12 +35,12 @@ module.exports = function (app, db) {
     console.log("In ClassParticipant API")
     db.Class_participant.bulkCreate(req.body.participantData).then(function (resData) {
 
-      var sqlStr = "UPDATE class_instances SET seats_filled = seats_filled - " + req.body.participantData.length + "  WHERE id= " + req.body.participantData[0].ClassInstanceId + " AND ClassDescriptionId= "+req.body.participantData[0].ClassDescriptionId+";";
+      var sqlStr = "UPDATE Class_instances SET seats_filled = seats_filled - " + req.body.participantData.length + "  WHERE id= " + req.body.participantData[0].ClassInstanceId + " AND ClassDescriptionId= "+req.body.participantData[0].ClassDescriptionId+";";
       console.log(sqlStr);
       db.sequelize.query(sqlStr).then(function (result) {
 
         var emailData = [];
-        var sqlString = "Select class_descriptions.class_name, class_descriptions.length, class_instances.week_day, class_instances.start_date, class_instances.end_date, class_instances.time, registereduser.firstName, registereduser.lastName, registereduser.email from registereduser, class_descriptions, class_instances where registereduser.ruId='" + req.body.participantData[0].FamilyId + "' and class_descriptions.id=" + req.body.participantData[0].ClassDescriptionId + " and class_instances.id=" + req.body.participantData[0].ClassInstanceId + " ;";
+        var sqlString = "Select Class_descriptions.class_name, Class_descriptions.length, Class_instances.week_day, Class_instances.start_date, Class_instances.end_date, Class_instances.time, RegisteredUser.firstName, RegisteredUser.lastName, RegisteredUser.email from RegisteredUser, Class_descriptions, Class_instances where RegisteredUser.ruId='" + req.body.participantData[0].FamilyId + "' and Class_descriptions.id=" + req.body.participantData[0].ClassDescriptionId + " and Class_instances.id=" + req.body.participantData[0].ClassInstanceId + " ;";
         db.sequelize.query(sqlString).then(function (result) {
           for (var i = 0; i < req.body.participantData.length; i++) {
             emailData.push({
