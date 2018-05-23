@@ -1,5 +1,5 @@
 {
-  "name": "JSJSwimSignUps",
+  "name": "JSJSwim--SignUps",
   "version": "1.0.0",
   "description": "## Project 1 JSJSwim is a website for a swim lesson company that is located in central New Jersey.  The site includes a lesson request form, locations on a map view, FAQ and information for continued learning from home.",
   "main": "server.js",

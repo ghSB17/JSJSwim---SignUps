@@ -18,7 +18,7 @@ module.exports = function (app) {
     console.log(req.user);
     console.log("========================");
     var descId = parseInt(req.params.id);
-    var queryString = "SELECT Class_instances.id AS 'id', week_day,time, start_date, end_date, seats_total, ClassDescriptionId, length, class_name,(seats_total-seats_filled) AS 'remaining' FROM Class_instances INNER JOIN Class_descriptions ON Class_instances.ClassDescriptionId=Class_descriptions.id AND Class_instances.ClassDescriptionId=33 ORDER BY Class_instances.week_day, Class_instances.time;";
+    var queryString = "SELECT Class_instances.id AS 'id', week_day,time, start_date, end_date, seats_total, ClassDescriptionId, length, class_name,(seats_total-seats_filled) AS 'remaining' FROM Class_instances INNER JOIN Class_descriptions ON Class_instances.ClassDescriptionId=Class_descriptions.id AND Class_instances.ClassDescriptionId="+descId+" ORDER BY Class_instances.week_day, Class_instances.time;";
     // console.log(queryString);
     db.sequelize.query(queryString).then(function (courseInstancesData) {
 
