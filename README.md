@@ -22,6 +22,7 @@ This website is a good template for a service providing company that needs a tem
 - uuid
 - bcrypt-node.js
 - Ajax
+- nodemailer
 
 ### Front End
 * HTML
@@ -38,14 +39,51 @@ This website is a good template for a service providing company that needs a tem
 
 
 ### ERD
-* Flowchart here
+![Flowchart Image](./notes/JSJSWIM_DB.png)
+
 
 ### JSJ Swim School 
-* Screenshots here
+* Home Page
+![Home page](./notes/homepage.PNG)
+
+* User Login
+![Login](./notes/Login_Register.PNG)
+
+* User Sign-in 
+![Sign-up Page](./notes/Signup.PNG)
+
+* Course Registration 
+![Course Registration](./notes/Course_Registration.PNG)
+
+* Registration Confirmation
+![Registration Confirmation](./notes/Registered.PNG)
+
+* Courses  
+![Courses](./notes/Courses.png)
+
+* Courses - Error 
+![Courses Error](./notes/Error-AlreadySignedUp.PNG)
+
+* Registered Email 
+![Registered Email](./notes/RegisteredEmail.PNG)
+
+* Class Confirmation Email 
+![Class Confirmation Email](./notes/ClassSignUp.PNG)
+
+### Admin
+
+* Admin 
+![Admin](./notes/admin.PNG)
+
+* Class Descriptions 
+![Admin - Class Descriptions](./notes/Class_Description.PNG)
+
+* Class Instance 
+![Admin - Class Instance](./notes/Class_Instance.PNG)
 
 ### Quick Start
 
-T0 run a local / development copy:
+To run a local / development copy:
 
 1. Update the config.json file:
 ```json
